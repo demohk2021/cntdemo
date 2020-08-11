@@ -1,0 +1,39 @@
+package app.controller.www.service;
+
+import app.global.Global;
+import app.helper.ApplicationHelper;
+import net.rails.ext.AbsGlobal;
+import net.rails.sql.worker.FindWorker;
+import java.util.List;
+import net.rails.sql.query.Query;
+import net.rails.active_record.ActiveRecord;
+import java.util.Map;
+
+public class FlightInfoService extends ActionService {
+
+	public FlightInfoService(AbsGlobal g) {
+		super(g);
+	}
+
+	@Override
+	protected FindWorker makeWorker(FindWorker worker){
+
+	    worker.joins().add("LEFT JOIN airport AS origin_airport_id_table ON origin_airport_id_table.id = flight_info.origin_airport_id");
+	    worker.selects().add("origin_airport_id_table.name AS as_flight_info_origin_airport_id_display");  
+	    worker.joins().add("LEFT JOIN airport AS destination_airport_id_table ON destination_airport_id_table.id = flight_info.destination_airport_id");
+	    worker.selects().add("destination_airport_id_table.name AS as_flight_info_destination_airport_id_display");  
+	    return worker;
+	}
+	
+	@Override
+	protected boolean beforeBoxList(Query q,String query) {
+	    q.and("any_flight_no",query);
+		return true;
+	}
+	
+	@Override
+	protected Map<String,Object> formatRecord(ActiveRecord src){
+       return super.formatRecord(src);
+	}
+	
+}

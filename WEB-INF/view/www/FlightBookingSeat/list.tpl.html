@@ -1,0 +1,44 @@
+{{#each list}}
+
+<div class="card">
+
+    <div class="card-content" style="padding-top:8px;padding-bottom:8px;">
+
+
+        <li class="swipeout">
+            <a href="/edit_flight_booking_seat/{{id}}" class="link item-link">
+                <div class="item-content swipeout-content">
+                    <div class="item-media">
+                        <i class="icon list-icon-FlightBookingSeat"></i>
+                    </div>
+                    <div class="item-inner">
+                        <div class="row">
+                            <!--<div class="row">-->
+                                <div class="col-33">
+                                    <span style="font-size:18px;padding-left:5px;padding-right:30px:">{{passenger_name}}</span>
+                                </div>
+                                <div class="col-33">
+                                    <span style="padding-left:10px;padding-right:10px;" class="badge">{{passport_no}}</span>
+                                </div>
+                                <div class="col-33">
+                                    <span style="padding-left:10px;padding-right:10px;" class="badge color-blue">{{seat_no}}</span>
+                                </div>
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div class="swipeout-actions-right">
+                <a href="/delete_flight_booking_seat/{{id}}" class="color-red link">
+          <i class="icon f7-icons ios-only">trash</i>
+          <i class="icon f7-icons material-icons md-only">trash</i>
+        </a>
+            </div>
+        </li>
+
+    </div>
+</div>
+
+
+
+{{/each}}

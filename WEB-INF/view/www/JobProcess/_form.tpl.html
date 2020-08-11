@@ -1,0 +1,142 @@
+    
+<div class="block-title">Form</div>
+<div class="list inline-labels no-hairlines-md">
+    <ul>
+
+        
+        
+
+
+         <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$JobProcess.job_id</div>
+                <div class="item-input-wrap">
+                    <a class="item-link item-content JobProcess_job_id" href="#" >
+                        <input type="hidden" name="JobProcess[job_id]">
+                        <div class="item-inner">
+                          <div class="item-after"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+
+        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$JobProcess.hostname</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$JobProcess.hostname" class="JobProcess_hostname" name="JobProcess[hostname]" value="{{data.hostname}}"  validate/>
+                    <span class="input-clear-button"></span>
+                    
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+        
+        
+
+
+
+    <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$JobProcess.end_time</div>
+                <div class="item-input-wrap">
+                    <input type="datetime-local" class="JobProcess_end_time" name="JobProcess[end_time]" value="{{data.end_time}}"  validate />
+                    
+                </div>
+            </div>
+    </li>                    
+ 
+
+
+ 
+        
+        
+
+
+
+    <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$JobProcess.final_fire_time</div>
+                <div class="item-input-wrap">
+                    <input type="datetime-local" class="JobProcess_final_fire_time" name="JobProcess[final_fire_time]" value="{{data.final_fire_time}}"  validate />
+                    
+                </div>
+            </div>
+    </li>                    
+ 
+
+
+ 
+        
+        
+
+
+
+    <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$JobProcess.next_fire_time</div>
+                <div class="item-input-wrap">
+                    <input type="datetime-local" class="JobProcess_next_fire_time" name="JobProcess[next_fire_time]" value="{{data.next_fire_time}}"  validate />
+                    
+                </div>
+            </div>
+    </li>                    
+ 
+
+
+ 
+        
+        
+
+
+
+    <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$JobProcess.previous_fire_time</div>
+                <div class="item-input-wrap">
+                    <input type="datetime-local" class="JobProcess_previous_fire_time" name="JobProcess[previous_fire_time]" value="{{data.previous_fire_time}}"  validate />
+                    
+                </div>
+            </div>
+    </li>                    
+ 
+
+
+ 
+        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$JobProcess.state</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$JobProcess.state" class="JobProcess_state" name="JobProcess[state]" value="{{data.state}}"  validate/>
+                    <span class="input-clear-button"></span>
+                    
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+     </ul>
+    <input type="hidden" name="JobProcess[id]" value="{{data.id}}" />
+    <input type="hidden" name="JobProcess[updated_at_long]" value="{{data.updated_at_long}}" />
+</div>                    

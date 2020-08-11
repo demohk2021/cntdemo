@@ -1,0 +1,254 @@
+    
+<div class="block-title">Form</div>
+<div class="list inline-labels no-hairlines-md">
+    <ul>
+
+                                                                                                                                                            
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$Sequence.model</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$Sequence.model" class="Sequence_model" name="Sequence[model]" value="{{data.model}}"  required validate/>
+                    <span class="input-clear-button"></span>
+                    <div class='item-input-info'></div>
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+                                                                                        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$Sequence.prefix</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$Sequence.prefix" class="Sequence_prefix" name="Sequence[prefix]" value="{{data.prefix}}"  required validate/>
+                    <span class="input-clear-button"></span>
+                    <div class='item-input-info'></div>
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+        
+        
+
+
+
+    <li class="item-content item-input">
+        <div class="item-inner">
+            <div class="item-title item-label">$Sequence.display_prefix</div>
+            <div class="item-input-wrap">
+          <label class="toggle">
+            <input type="checkbox" name="Sequence[display_prefix]" class="Sequence_display_prefix" {{${Escape.h}if data.display_prefix}}checked{{/if}} />
+            <span class="toggle-icon"></span>
+          </label>
+            </div>
+        </div>
+    </li>          
+ 
+
+
+ 
+        
+        
+
+
+
+    <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$Sequence.step</div>
+                <div class="item-input-wrap">
+                    <input type="number" pattern="[0-9]*" inputmode="numeric" placeholder="$Sequence.step" class="Sequence_step" name="Sequence[step]" value="{{data.step}}"  validate />
+                       
+                </div>
+            </div>
+    </li>  
+ 
+
+
+ 
+        
+        
+
+
+
+    <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$Sequence.len</div>
+                <div class="item-input-wrap">
+                    <input type="number" pattern="[0-9]*" inputmode="numeric" placeholder="$Sequence.len" class="Sequence_len" name="Sequence[len]" value="{{data.len}}"  validate />
+                       
+                </div>
+            </div>
+    </li>  
+ 
+
+
+ 
+        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$Sequence.split_char</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$Sequence.split_char" class="Sequence_split_char" name="Sequence[split_char]" value="{{data.split_char}}"  validate/>
+                    <span class="input-clear-button"></span>
+                    
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+        
+        
+
+
+
+    <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$Sequence.current</div>
+                <div class="item-input-wrap">
+                    <input type="number" pattern="[0-9]*" inputmode="numeric" placeholder="$Sequence.current" class="Sequence_current" name="Sequence[current]" value="{{data.current}}"  validate />
+                       
+                </div>
+            </div>
+    </li>  
+ 
+
+
+ 
+        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$Sequence.ftime</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$Sequence.ftime" class="Sequence_ftime" name="Sequence[ftime]" value="{{data.ftime}}"  validate/>
+                    <span class="input-clear-button"></span>
+                    
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$Sequence.clear_rule</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$Sequence.clear_rule" class="Sequence_clear_rule" name="Sequence[clear_rule]" value="{{data.clear_rule}}"  validate/>
+                    <span class="input-clear-button"></span>
+                    
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+        
+        
+
+
+
+    <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$Sequence.next_clear_at</div>
+                <div class="item-input-wrap">
+                    <input type="datetime-local" class="Sequence_next_clear_at" name="Sequence[next_clear_at]" value="{{data.next_clear_at}}"  validate />
+                    
+                </div>
+            </div>
+    </li>                    
+ 
+
+
+ 
+                                                                                        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$Sequence.owner_hostname</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$Sequence.owner_hostname" class="Sequence_owner_hostname" name="Sequence[owner_hostname]" value="{{data.owner_hostname}}"  required validate/>
+                    <span class="input-clear-button"></span>
+                    <div class='item-input-info'></div>
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$Sequence.note</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$Sequence.note" class="Sequence_note" name="Sequence[note]" value="{{data.note}}"  validate/>
+                    <span class="input-clear-button"></span>
+                    
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+     </ul>
+    <input type="hidden" name="Sequence[id]" value="{{data.id}}" />
+    <input type="hidden" name="Sequence[updated_at_long]" value="{{data.updated_at_long}}" />
+</div>                    

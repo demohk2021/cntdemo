@@ -1,0 +1,127 @@
+    
+<div class="block-title">Form</div>
+<div class="list inline-labels no-hairlines-md">
+    <ul>
+
+                                                                                        
+        
+
+
+         <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightBookingSeat.flight_booking_id</div>
+                <div class="item-input-wrap">
+                    <a class="item-link item-content FlightBookingSeat_flight_booking_id" href="#" >
+                        <input type="hidden" name="FlightBookingSeat[flight_booking_id]">
+                        <div class="item-inner">
+                          <div class="item-after"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+
+        
+        
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightBookingSeat.ticket_no</div>
+                <div class="item-input-wrap">
+                    <input type="text" class="FlightBookingSeat_ticket_no" placeholder="(Auto Generate)" value="{{data.ticket_no}}" disabled="disabled"/>
+                </div>
+            </div>
+        </li>
+ 
+
+
+ 
+                                                                                        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightBookingSeat.passenger_name</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$FlightBookingSeat.passenger_name" class="FlightBookingSeat_passenger_name" name="FlightBookingSeat[passenger_name]" value="{{data.passenger_name}}"  required validate/>
+                    <span class="input-clear-button"></span>
+                    <div class='item-input-info'></div>
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightBookingSeat.passport_no</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$FlightBookingSeat.passport_no" class="FlightBookingSeat_passport_no" name="FlightBookingSeat[passport_no]" value="{{data.passport_no}}"  validate/>
+                    <span class="input-clear-button"></span>
+                    
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+                                                                                        
+        
+
+
+
+    <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightBookingSeat.age</div>
+                <div class="item-input-wrap">
+                    <input type="number" pattern="[0-9]*" inputmode="numeric" placeholder="$FlightBookingSeat.age" class="FlightBookingSeat_age" name="FlightBookingSeat[age]" value="{{data.age}}"  required validate />
+                    <div class='item-input-info'></div>   
+                </div>
+            </div>
+    </li>  
+ 
+
+
+ 
+                                                                                        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightBookingSeat.seat_no</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$FlightBookingSeat.seat_no" class="FlightBookingSeat_seat_no" name="FlightBookingSeat[seat_no]" value="{{data.seat_no}}"  required validate/>
+                    <span class="input-clear-button"></span>
+                    <div class='item-input-info'></div>
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+     </ul>
+    <input type="hidden" name="FlightBookingSeat[id]" value="{{data.id}}" />
+    <input type="hidden" name="FlightBookingSeat[updated_at_long]" value="{{data.updated_at_long}}" />
+</div>                    

@@ -1,0 +1,14 @@
+ 
+MySql: 
+  family: Mysql
+  datasource: org.apache.commons.dbcp.BasicDataSource
+  driver: com.mysql.jdbc.Driver
+  url: "jdbc:mysql://krcloud01-201.killcoding.net:14002/appdb?characterEncoding=utf8"
+  username: dbappuser
+  password: 0zd3pv
+  quote: `keyword`
+  schema: appdb
+  formats: 
+    datetime: "yyyy-MM-dd HH:mm:ss.SSS"
+    date: yyyy-MM-dd
+    time: "HH:mm:ss.SSS"

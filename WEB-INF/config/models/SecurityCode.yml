@@ -1,0 +1,26 @@
+ 
+attributes: 
+  user_id: 
+    type: String
+    default: ~
+  code: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+  expired_at: 
+    type: Timestamp
+    format: "yyyy-MM-dd HH:mm:ss"
+    default: ~
+    validates_presence_of: 
+      on: save
+  action: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+  status: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save

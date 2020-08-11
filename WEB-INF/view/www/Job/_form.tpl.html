@@ -1,0 +1,222 @@
+    
+<div class="block-title">Form</div>
+<div class="list inline-labels no-hairlines-md">
+    <ul>
+
+                                                                                                                                                                        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$Job.job_group</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$Job.job_group" class="Job_job_group" name="Job[job_group]" value="{{data.job_group}}"  required minlength=1 maxlength=20 validate/>
+                    <span class="input-clear-button"></span>
+                    <div class='item-input-info'></div>
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+                                                                                                                                                            
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$Job.job_name</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$Job.job_name" class="Job_job_name" name="Job[job_name]" value="{{data.job_name}}"  required validate/>
+                    <span class="input-clear-button"></span>
+                    <div class='item-input-info'></div>
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+                                                                                                                                                                        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$Job.trigger_group</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$Job.trigger_group" class="Job_trigger_group" name="Job[trigger_group]" value="{{data.trigger_group}}"  required minlength=1 maxlength=50 validate/>
+                    <span class="input-clear-button"></span>
+                    <div class='item-input-info'></div>
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+                                                                                                                                                                        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$Job.trigger_name</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$Job.trigger_name" class="Job_trigger_name" name="Job[trigger_name]" value="{{data.trigger_name}}"  required minlength=1 maxlength=50 validate/>
+                    <span class="input-clear-button"></span>
+                    <div class='item-input-info'></div>
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+                                                                                        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$Job.cron_expression</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$Job.cron_expression" class="Job_cron_expression" name="Job[cron_expression]" value="{{data.cron_expression}}"  required validate/>
+                    <span class="input-clear-button"></span>
+                    <div class='item-input-info'></div>
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+                                                                                        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$Job.classify</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$Job.classify" class="Job_classify" name="Job[classify]" value="{{data.classify}}"  required validate/>
+                    <span class="input-clear-button"></span>
+                    <div class='item-input-info'></div>
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+                                                                                        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$Job.hostnames</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$Job.hostnames" class="Job_hostnames" name="Job[hostnames]" value="{{data.hostnames}}"  required validate/>
+                    <span class="input-clear-button"></span>
+                    <div class='item-input-info'></div>
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$Job.comment</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$Job.comment" class="Job_comment" name="Job[comment]" value="{{data.comment}}"  validate/>
+                    <span class="input-clear-button"></span>
+                    
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+        
+        
+
+
+
+    <li class="item-content item-input">
+        <div class="item-inner">
+            <div class="item-title item-label">$Job.pause_job</div>
+            <div class="item-input-wrap">
+          <label class="toggle">
+            <input type="checkbox" name="Job[pause_job]" class="Job_pause_job" {{${Escape.h}if data.pause_job}}checked{{/if}} />
+            <span class="toggle-icon"></span>
+          </label>
+            </div>
+        </div>
+    </li>          
+ 
+
+
+ 
+        
+        
+
+
+
+    <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$Job.paused_at</div>
+                <div class="item-input-wrap">
+                    <input type="datetime-local" class="Job_paused_at" name="Job[paused_at]" value="{{data.paused_at}}"  validate />
+                    
+                </div>
+            </div>
+    </li>                    
+ 
+
+
+     </ul>
+    <input type="hidden" name="Job[id]" value="{{data.id}}" />
+    <input type="hidden" name="Job[updated_at_long]" value="{{data.updated_at_long}}" />
+</div>                    

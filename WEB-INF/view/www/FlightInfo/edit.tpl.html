@@ -1,0 +1,37 @@
+<div class="page no-toolbar" id="FlightInfoEditPage" style="background-color: #E3E7F2 !important;">
+     <div class="navbar" style="background-color: #3F4678 !important;">
+            <div class="navbar-inner">
+                            <div class="left">
+                <a href="#" class="link back back_flight_info" onclick="$$('#FlightInfoEditPage .FlightBooking_id').val('');$$('.FlightBookingSeat_flight_booking_id').val('');">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+            </div>
+                <div class="title">
+                    <img src="public/www/images/hkair.png" style="height:32px;" />
+                </div>
+            <!--
+             <div class="right">
+                        <a href="#" class="link popover-open" data-popover=".FlightInfo_popover-links">
+                   <i class="icon f7-icons ios-only">more</i>
+                   <i class="icon f7-icons md-only">more</i>
+                </a>
+            </div>
+            -->
+            </div>
+        </div>
+    <div class="page-content">
+      <form class="list">
+      #parse('www/FlightInfo/_form.tpl.html')
+      </form>
+      <div class="block">
+        <button style="height:60px;" class="button col color-demo-button button button-raised button-fill save FlightBooking_booking">Booking</button>
+        <br/>
+        <button style="height:60px;" class="button col color-demo-button button button-raised button-fill FlightBooking_confirm">Confirm</button>
+         <br/>
+        <button style="height:60px;" class="button col color-demo-button button button-raised button-fill FlightBooking_exit">Exit</button>
+
+      </div>      
+      
+    </div>
+</div>

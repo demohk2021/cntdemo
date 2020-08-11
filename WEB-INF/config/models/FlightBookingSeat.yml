@@ -1,0 +1,28 @@
+ 
+attributes: 
+  flight_booking_id: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+  ticket_no: 
+    type: String
+    default: ~
+  passenger_name: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+  passport_no: 
+    type: String
+    default: ~
+  age: 
+    type: Integer
+    default: ~
+    validates_presence_of: 
+      on: save
+  seat_no: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save

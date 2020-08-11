@@ -1,0 +1,62 @@
+{{#each list}}
+<a href="/edit_flight_info/{{id}}" class="link item-link">
+<div class="card" style="">
+  <div class="card-content">
+    <div class="list media-list">
+      <ul style="padding-left:10px;">
+        <li class="item-content">
+            <div class="item-media">
+              <i class="icon list-icon-FlightInfo"></i>
+            </div>
+          <div class="item-inner">
+            <div class="item-title-row">
+
+                  <div style="display: table; width: 90%;table-layout: fixed; border-spacing:0px;">
+                      <div style="display: table-cell;vertical-align:top;width:50px;margin:0;border-spacing:0px;border: 0px solid black;">
+                        <div style="font-size: 18px;border: 0px solid black;border-spacing:0px;height:30px;">
+                            {{schedule_time}}
+                        </div>   
+                        <div style="font-size: 14px;border: 0px solid black;">
+                            {{orgin_airport_code}}
+                        </div>
+                      </div>
+                      
+                      <div style="display:table-cell;vertical-align:middle;margin:0 auto;border: 0px solid black;padding-top:4px;padding-left:5px;">
+                          <hr style="border: 0.8px solid silver;border-radius:1px;"/>
+                      </div>
+                      
+                      <div style="display:table-cell;vertical-align:middle;margin:0 auto;width:20px;border: 0px solid black;">
+                          <i class="icon list-icon-org-to-dest" ></i>
+                      </div>
+                      
+                     <div style="display:table-cell;vertical-align:middle;margin:0 auto;border: 0px solid black;padding-top:4px;padding-right:5px;">
+                          <hr style="border: 0.8px solid silver;border-radius:1px;"/>
+                      </div>
+                      
+                      <div style="display: table-cell;vertical-align:top;width:80px;margin:0;border-spacing:0px;border: 0px solid black;">
+                        <div style="font-size: 18px;border: 0px solid black;border-spacing:0px;height:30px;">
+                            {{arrival_time}}
+                            <span style="font-size: 10px;padding-left:6px;color:darkgrey;">{{beyond_the_day}}</span>
+                        </div>   
+                        <div style="font-size: 14px;border: 0px solid black;">
+                            {{destination_airport_code}}
+                        </div>
+                      </div>
+                  </div>
+
+            </div>
+            <div class="item-subtitle" style="font-size:11px;color:darkgrey;">
+               <b> {{flight_note}}</b>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="card-footer"><span><b>{{airline_name}}</b></span><span><b>{{price}}</b></span></div>
+</div>
+</a>
+{{/each}}
+
+
+

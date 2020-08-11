@@ -1,0 +1,26 @@
+ 
+attributes: 
+  name: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+  phone: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+  passport: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+  credit_card_no: 
+    type: String
+    default: ~
+  expiry_date: 
+    type: String
+    default: ~
+  holder_name: 
+    type: String
+    default: ~

@@ -1,0 +1,39 @@
+ 
+attributes: 
+  flight_no: 
+    type: String
+    default: ~
+  schedule_date: 
+    type: Date
+    format: yyyy-MM-dd
+    default: ~
+  schedule_time: 
+    type: String
+    default: ~
+  arrival_time: 
+    type: String
+    default: ~
+  beyond_the_day: 
+    type: String
+    default: ~
+  origin_airport_id: 
+    type: String
+    default: ~
+  destination_airport_id: 
+    type: String
+    default: ~
+  price: 
+    type: String
+    default: ~
+  airline_name: 
+    type: String
+    default: ~
+  icon_css: 
+    type: String
+    default: ~
+  flight_duration: 
+    type: String
+    default: ~
+  flight_note: 
+    type: String
+    default: ~

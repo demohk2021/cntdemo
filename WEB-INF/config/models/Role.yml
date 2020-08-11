@@ -1,0 +1,21 @@
+ 
+attributes: 
+  name: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+    validates_length_of: 
+      allow_blank: false
+      maximum: 20
+      minimum: 3
+      on: save
+    validates_uniqueness_of: 
+      allow_blank: false
+      or:  {}
+      and:  {}
+      scope: []
+      on: save
+  code: 
+    type: String
+    default: ~

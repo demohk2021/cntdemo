@@ -1,0 +1,21 @@
+{{#each list}}
+<li class="swipeout">
+    <a href="/edit_flight_info/{{id}}" class="link item-link">
+        <div class="item-content swipeout-content">
+            <div class="item-media"> <i class="icon list-icon-FlightInfo"></i>
+            </div>
+            <div class="item-inner">
+                <div class="item-title">
+                    {{flight_no}}
+                </div>
+            </div>
+        </div>
+    </a>
+    <div class="swipeout-actions-right">
+        <a href="/delete_flight_info/{{id}}" class="color-red link">
+          <i class="icon f7-icons ios-only">trash</i>
+          <i class="icon f7-icons material-icons md-only">trash</i>
+        </a>
+    </div>
+</li>
+{{/each}}

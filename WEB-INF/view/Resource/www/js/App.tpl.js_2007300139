@@ -1,0 +1,317 @@
+(function(){
+            
+function initApp() {
+   app = new Framework7({
+        root: "#app",
+        id: "io.framework7.YourAppName",
+        name: "Framework7",
+        theme: "auto",
+        version: "1.0.0000(20200730)",
+        routes: routes,
+        scrollIntoViewOnFocus: true,
+        scrollIntoViewCentered: true,
+        popup: {
+            closeByBackdropClick: false,
+        },
+        data: function() {
+            return {
+                tpl: {
+                                         EmailSchedule: {},
+                                         JobProcess: {},
+                                         Member: {},
+                                         EventSchedule: {},
+                                         FlightBookingSeat: {},
+                                         RolePermission: {},
+                                         User: {},
+                                         SecurityCode: {},
+                                         Sequence: {},
+                                         FlightInfo: {},
+                                         Role: {},
+                                         Job: {},
+                                         Airport: {},
+                                         FlightBooking: {},
+                                        Home: {}
+                }
+            };
+        }
+    });
+    initTemplate();
+    
+         app.on('tabShow', function(tabEl) {
+            //console.log('tabShow');
+            
+            app.data.currentPage = tabEl.id;
+            
+            //if(app.views.current) app.views.current.router.back();
+            
+            var view = $$(tabEl);
+            createViews([view]);
+            var page = $$(view.find(".page")[0]);
+            if(page) pageOpen(page);
+        });
+
+        app.on('pageReinit', function(pageEl) {
+            //console.log("pageReinit");
+            var page = $$(pageEl.pageFrom.el);
+            if(page) pageClose(page);
+        });
+        app.on('popupClose', function(popup) {
+            //console.log('popupClose');
+            var page = $$($$(popup.el).find(".page")[0]);
+            if(page) pageClose(page);
+        });
+        app.on('popupOpen', function(popup) {
+            //console.log('popupOpen');
+            app.data.currentPage = popup.el.id;
+            var views = $$(popup.el).find(".view");
+            createViews(views);
+        });
+        app.on('popupOpened', function(popup) {
+            //console.log('popupOpened');
+            app.data.currentPage = popup.el.id;
+            var page = $$($$(popup.el).find(".page")[0]);
+            if(page) pageOpen(page);
+        });
+        app.on('panelOpen', function(panel) {
+            //console.log('panelOpen');
+            app.data.currentPage = panel.el.id;
+            var views = $$(panel.el).find(".view");
+            createViews(views);
+        });
+        app.on('panelOpened', function(panel) {
+            //console.log('panelOpened');
+            app.data.currentPage = panel.el.id;
+            var page = $$($$(panel.el).find(".page")[0]);
+            if(page) pageOpen(page);
+        });
+
+    setTimeout(function(){
+      app.tab.show('#FlightInfoView');
+    },300);    
+};
+
+     function createViews(views) {
+        views.forEach(function(view, index) {
+            if (!app.view.get(view)) {
+                app.views.create(view, {
+                    on: {
+                        pageInit: function(pageEl) {
+                            try {
+                                var page = $$(pageEl.el);
+                                var pageId = page.attr("id");
+                                if (pageId) {
+                                    var viewJsClass = eval(pageId);
+                                    var viewJsObject = viewJsClass();
+                                    var pageInit = viewJsObject.pageInit;
+                                    if (pageInit) {
+                                        pageInit(page);
+                                    }
+                                    createViews(page.find(".view"));
+                                }
+                            } catch (e) {
+                                console.log("Point: " + pageId, e.message);
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    }
+
+    function pageClose(pageEl) {
+        var page = $$(pageEl);
+        var pageId = page.attr("id");
+        try {
+            if (pageId) {
+                var viewJsClass = eval(pageId);
+                var viewJsObject = viewJsClass();
+                var pageClose = viewJsObject.pageClose;
+                if (pageClose) {
+                    pageClose(page);
+                }
+            }
+        } catch (e) {
+            console.log("Point: " + pageId, e.message);
+        }
+    }
+
+    function pageOpen(pageEl) {
+        var page = $$(pageEl);
+        var pageId = page.attr("id");
+        try {
+            if (pageId) {
+                var viewJsClass = eval(pageId);
+                var viewJsObject = viewJsClass();
+                var pageOpen = viewJsObject.pageOpen;
+                if (pageOpen) {
+                    pageOpen(page);
+                }
+            }
+        } catch (e) {
+            console.log("Point: " + pageId, e.message);
+        }
+    }
+
+function initTemplate() {
+    app.request.get('EmailSchedule/template/list.html', function(data) {
+        app.data.tpl.EmailSchedule['list'] = data;
+    });
+    app.request.get('EmailSchedule/template/new.html', function(data) {
+        app.data.tpl.EmailSchedule['new'] = data;
+    });
+    app.request.get('EmailSchedule/template/edit.html', function(data) {
+        app.data.tpl.EmailSchedule['edit'] = data;
+    });
+    app.request.get('JobProcess/template/list.html', function(data) {
+        app.data.tpl.JobProcess['list'] = data;
+    });
+    app.request.get('JobProcess/template/new.html', function(data) {
+        app.data.tpl.JobProcess['new'] = data;
+    });
+    app.request.get('JobProcess/template/edit.html', function(data) {
+        app.data.tpl.JobProcess['edit'] = data;
+    });
+    app.request.get('Member/template/list.html', function(data) {
+        app.data.tpl.Member['list'] = data;
+    });
+    app.request.get('Member/template/new.html', function(data) {
+        app.data.tpl.Member['new'] = data;
+    });
+    app.request.get('Member/template/edit.html', function(data) {
+        app.data.tpl.Member['edit'] = data;
+    });
+    app.request.get('EventSchedule/template/list.html', function(data) {
+        app.data.tpl.EventSchedule['list'] = data;
+    });
+    app.request.get('EventSchedule/template/new.html', function(data) {
+        app.data.tpl.EventSchedule['new'] = data;
+    });
+    app.request.get('EventSchedule/template/edit.html', function(data) {
+        app.data.tpl.EventSchedule['edit'] = data;
+    });
+    app.request.get('FlightBookingSeat/template/list.html', function(data) {
+        app.data.tpl.FlightBookingSeat['list'] = data;
+    });
+    app.request.get('FlightBookingSeat/template/new.html', function(data) {
+        app.data.tpl.FlightBookingSeat['new'] = data;
+    });
+    app.request.get('FlightBookingSeat/template/edit.html', function(data) {
+        app.data.tpl.FlightBookingSeat['edit'] = data;
+    });
+    app.request.get('RolePermission/template/list.html', function(data) {
+        app.data.tpl.RolePermission['list'] = data;
+    });
+    app.request.get('RolePermission/template/new.html', function(data) {
+        app.data.tpl.RolePermission['new'] = data;
+    });
+    app.request.get('RolePermission/template/edit.html', function(data) {
+        app.data.tpl.RolePermission['edit'] = data;
+    });
+    app.request.get('User/template/list.html', function(data) {
+        app.data.tpl.User['list'] = data;
+    });
+    app.request.get('User/template/new.html', function(data) {
+        app.data.tpl.User['new'] = data;
+    });
+    app.request.get('User/template/edit.html', function(data) {
+        app.data.tpl.User['edit'] = data;
+    });
+    app.request.get('SecurityCode/template/list.html', function(data) {
+        app.data.tpl.SecurityCode['list'] = data;
+    });
+    app.request.get('SecurityCode/template/new.html', function(data) {
+        app.data.tpl.SecurityCode['new'] = data;
+    });
+    app.request.get('SecurityCode/template/edit.html', function(data) {
+        app.data.tpl.SecurityCode['edit'] = data;
+    });
+    app.request.get('Sequence/template/list.html', function(data) {
+        app.data.tpl.Sequence['list'] = data;
+    });
+    app.request.get('Sequence/template/new.html', function(data) {
+        app.data.tpl.Sequence['new'] = data;
+    });
+    app.request.get('Sequence/template/edit.html', function(data) {
+        app.data.tpl.Sequence['edit'] = data;
+    });
+    app.request.get('FlightInfo/template/list.html', function(data) {
+        app.data.tpl.FlightInfo['list'] = data;
+    });
+    app.request.get('FlightInfo/template/new.html', function(data) {
+        app.data.tpl.FlightInfo['new'] = data;
+    });
+    app.request.get('FlightInfo/template/edit.html', function(data) {
+        app.data.tpl.FlightInfo['edit'] = data;
+    });
+    app.request.get('Role/template/list.html', function(data) {
+        app.data.tpl.Role['list'] = data;
+    });
+    app.request.get('Role/template/new.html', function(data) {
+        app.data.tpl.Role['new'] = data;
+    });
+    app.request.get('Role/template/edit.html', function(data) {
+        app.data.tpl.Role['edit'] = data;
+    });
+    app.request.get('Job/template/list.html', function(data) {
+        app.data.tpl.Job['list'] = data;
+    });
+    app.request.get('Job/template/new.html', function(data) {
+        app.data.tpl.Job['new'] = data;
+    });
+    app.request.get('Job/template/edit.html', function(data) {
+        app.data.tpl.Job['edit'] = data;
+    });
+    app.request.get('Airport/template/list.html', function(data) {
+        app.data.tpl.Airport['list'] = data;
+    });
+    app.request.get('Airport/template/new.html', function(data) {
+        app.data.tpl.Airport['new'] = data;
+    });
+    app.request.get('Airport/template/edit.html', function(data) {
+        app.data.tpl.Airport['edit'] = data;
+    });
+    app.request.get('FlightBooking/template/list.html', function(data) {
+        app.data.tpl.FlightBooking['list'] = data;
+    });
+    app.request.get('FlightBooking/template/new.html', function(data) {
+        app.data.tpl.FlightBooking['new'] = data;
+    });
+    app.request.get('FlightBooking/template/edit.html', function(data) {
+        app.data.tpl.FlightBooking['edit'] = data;
+    });
+    app.request.get('public/about.html', function(data) {
+        app.data.tpl.about = data;
+    });
+}
+
+setTimeout(function(){
+    
+  app.popup.create({
+     el: '#LoginPopup',
+     animate: true
+  }).open();
+  
+},800);
+
+initApp();
+
+})();
+
+
+function getDisplayPage(){
+    var vs = $$(".popup");
+	for(var i = vs.length - 1;i >= 0;i--){
+	  var v = $$(vs[i]);
+      var id = v.attr("id");
+      var display = v.css("display")
+	  if(display === 'block') return v;
+	}
+    var vs = $$(".tab");
+	for(var i = vs.length - 1;i >= 0;i--){
+	  var v = $$(vs[i]);
+      var id = v.attr("id");
+      var display = v.css("display")
+	  if(display === 'block') return v;
+	}
+    return null;
+}

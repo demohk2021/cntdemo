@@ -1,0 +1,15 @@
+ 
+attributes: 
+  flight_info_id: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+  order_no: 
+    type: String
+    default: ~
+    # validates_presence_of: 
+    #   on: save
+  member_id: 
+    type: String
+    default: ~

@@ -1,0 +1,177 @@
+<div class="card" >
+    <div class="card-content">
+        <div class="list media-list">
+            <ul style="padding-left:10px;">
+                <li class="item-content">
+                    <div class="item-media">
+                        <i class="icon list-icon-FlightInfo"></i>
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-title-row">
+
+                            <div style="display: table; width: 90%;table-layout: fixed; border-spacing:0px;">
+                                <div style="display: table-cell;vertical-align:top;width:50px;margin:0;border-spacing:0px;border: 0px solid black;">
+                                    <div style="font-size: 18px;border: 0px solid black;border-spacing:0px;height:30px;">
+                                        {{data.schedule_time}}
+                                    </div>
+                                    <div style="font-size: 14px;border: 0px solid black;">
+                                        {{data.orgin_airport_code}}
+                                    </div>
+                                </div>
+
+                                <div style="display:table-cell;vertical-align:middle;margin:0 auto;border: 0px solid black;padding-top:4px;padding-left:5px;">
+                                    <hr style="border: 0.8px solid silver;border-radius:1px;" />
+                                </div>
+
+                                <div style="display:table-cell;vertical-align:middle;margin:0 auto;width:20px;border: 0px solid black;">
+                                    <i class="icon list-icon-org-to-dest"></i>
+                                </div>
+
+                                <div style="display:table-cell;vertical-align:middle;margin:0 auto;border: 0px solid black;padding-top:4px;padding-right:5px;">
+                                    <hr style="border: 0.8px solid silver;border-radius:1px;" />
+                                </div>
+
+                                <div style="display: table-cell;vertical-align:top;width:80px;margin:0;border-spacing:0px;border: 0px solid black;">
+                                    <div style="font-size: 18px;border: 0px solid black;border-spacing:0px;height:30px;">
+                                        {{data.arrival_time}}
+                                        <span style="font-size: 10px;padding-left:6px;color:darkgrey;">{{data.beyond_the_day}}</span>
+                                    </div>
+                                    <div style="font-size: 14px;border: 0px solid black;">
+                                        {{data.destination_airport_code}}
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="item-subtitle" style="font-size:11px;color:darkgrey;">
+                            <b> {{data.flight_note}}</b>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="card-footer"><span><b>{{data.airline_name}}</b></span><span><b>{{data.price}}</b></span></div>
+</div>
+
+<div class="card" style="">
+    <div class="card-content" style="padding-top:20px;padding-bottom:20px;">
+
+        <div class="list inline-labels no-hairlines-md">
+            <ul>
+
+                <li class="item-content item-input">
+                    <div class="item-inner">
+                        <div class="item-title item-label">$FlightInfo.flight_no</div>
+                        <div class="item-input-wrap">
+                            <input type="text" value="{{data.flight_no}}" readonly  />
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="item-content item-input">
+                    <div class="item-inner">
+                        <div class="item-title item-label">$FlightInfo.schedule_date</div>
+                        <div class="item-input-wrap">
+                            <input type="text" value="{{data.schedule_date}}" readonly  />
+                        </div>
+                    </div>
+                </li>                
+
+
+                <li class="item-content item-input">
+                    <div class="item-inner">
+                        <div class="item-title item-label">$FlightInfo.origin_airport_id</div>
+                        <div class="item-input-wrap">
+                            <input type="text" class="FlightInfo_origin_airport_id" readonly  />
+                        </div>
+                    </div>
+                </li>
+
+                <li class="item-content item-input">
+                    <div class="item-inner">
+                        <div class="item-title item-label">$FlightInfo.destination_airport_id</div>
+                        <div class="item-input-wrap">
+                            <input type="text" class="FlightInfo_destination_airport_id" readonly  />
+                        </div>
+                    </div>
+                </li>
+
+                <li class="item-content item-input">
+                    <div class="item-inner">
+                        <div class="item-title item-label">$FlightInfo.flight_duration</div>
+                        <div class="item-input-wrap">
+                            <input type="text" value="{{data.flight_duration}}" readonly />
+
+                        </div>
+                    </div>
+                </li>
+
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="card FlightBooking_card" >
+    <div class="card-content" style="padding-top:20px;padding-bottom:20px;">
+
+        <div class="list inline-labels no-hairlines-md">
+            <ul>
+
+                <li class="item-content item-input">
+                    <div class="item-inner">
+                        <div class="item-title item-label">$FlightBooking.order_no</div>
+                        <div class="item-input-wrap">
+                            <input type="text" class="FlightBooking_order_no" readonly  />
+                        </div>
+                    </div>
+                </li>
+
+
+                <li class="item-content item-input">
+                    <div class="item-inner">
+                        <div class="item-title item-label">Amount</div>
+                        <div class="item-input-wrap">
+                            <input type="text" class="FlightBooking_amount" readonly  />
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="item-content item-input">
+                    <div class="item-inner">
+                        <div class="item-title item-label">Passengers</div>
+                        <div class="item-input-wrap">
+                            <input type="text" class="FlightBooking_passengers" readonly  />
+                        </div>
+                    </div>
+                </li>   
+
+                <li class="item-content item-input">
+                    <div class="item-inner">
+                        <div class="item-title item-label">Email</div>
+                        <div class="item-input-wrap">
+                            <input type="text" placeholder="Email" class="FlightBooking_email" validate/>
+                        </div>
+                    </div>
+                </li>  
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<input type="hidden" class="FlightBooking_id" value="" />
+<input type="hidden" name="FlightInfo[id]" class="FlightInfo_id" value="{{data.id}}" />
+<input type="hidden" name="FlightInfo[updated_at_long]" value="{{data.updated_at_long}}" />
+
+
+

@@ -1,0 +1,47 @@
+ 
+attributes: 
+  user_id: 
+    type: String
+    default: ~
+  title: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+    validates_length_of: 
+      allow_blank: false
+      maximum: 200
+      minimum: 1
+      on: save
+  start_at: 
+    type: Timestamp
+    format: "yyyy-MM-dd HH:mm:ss"
+    default: ~
+    validates_presence_of: 
+      on: save
+  end_at: 
+    type: Timestamp
+    format: "yyyy-MM-dd HH:mm:ss"
+    default: ~
+    validates_presence_of: 
+      on: save
+  notes: 
+    type: String
+    default: ~
+  location: 
+    type: String
+    default: ~
+  reminder: 
+    type: String
+    default: ~
+  calendar_code: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+  web_link: 
+    type: String
+    default: ~
+  all_day: 
+    type: Boolean
+    default: false

@@ -1,0 +1,46 @@
+ 
+attributes: 
+  to_list: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+  cc_list: 
+    type: String
+    default: ~
+  bcc_list: 
+    type: String
+    default: ~
+  subject: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+  message: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+  response_msg: 
+    type: String
+    default: ~
+  status: 
+    type: String
+    default: ~
+  action: 
+    type: String
+    default: New
+  response_code: 
+    type: Integer
+    default: 0
+  process_host: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+  user_id: 
+    type: String
+    default: ~
+  attachement: 
+    type: String
+    default: ~

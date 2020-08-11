@@ -1,0 +1,184 @@
+    
+<div class="block-title">Form</div>
+<div class="list inline-labels no-hairlines-md">
+    <ul>
+
+                                                                                        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightBooking.flight_no</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$FlightBooking.flight_no" class="FlightBooking_flight_no" name="FlightBooking[flight_no]" value="{{data.flight_no}}"  required validate/>
+                    <span class="input-clear-button"></span>
+                    <div class='item-input-info'></div>
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+                                                                                        
+        
+
+
+         <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightBooking.flight_info_id</div>
+                <div class="item-input-wrap">
+                    <a class="item-link item-content FlightBooking_flight_info_id" href="#" >
+                        <input type="hidden" name="FlightBooking[flight_info_id]">
+                        <div class="item-inner">
+                          <div class="item-after"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+
+                                                                                        
+        
+
+
+
+    <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightBooking.scheduled_at</div>
+                <div class="item-input-wrap">
+                    <input type="datetime-local" class="FlightBooking_scheduled_at" name="FlightBooking[scheduled_at]" value="{{data.scheduled_at}}"  required validate />
+                    <div class='item-input-info'></div>
+                </div>
+            </div>
+    </li>                    
+ 
+
+
+ 
+                                                                                        
+        
+
+
+         <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightBooking.origin_airport_id</div>
+                <div class="item-input-wrap">
+                    <a class="item-link item-content FlightBooking_origin_airport_id" href="#" >
+                        <input type="hidden" name="FlightBooking[origin_airport_id]">
+                        <div class="item-inner">
+                          <div class="item-after"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+
+                                                                                        
+        
+
+
+         <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightBooking.destination_airport_id</div>
+                <div class="item-input-wrap">
+                    <a class="item-link item-content FlightBooking_destination_airport_id" href="#" >
+                        <input type="hidden" name="FlightBooking[destination_airport_id]">
+                        <div class="item-inner">
+                          <div class="item-after"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+
+                                                                                        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightBooking.status_code</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$FlightBooking.status_code" class="FlightBooking_status_code" name="FlightBooking[status_code]" value="{{data.status_code}}"  required validate/>
+                    <span class="input-clear-button"></span>
+                    <div class='item-input-info'></div>
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+                                                                                        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightBooking.trip_type</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$FlightBooking.trip_type" class="FlightBooking_trip_type" name="FlightBooking[trip_type]" value="{{data.trip_type}}"  required validate/>
+                    <span class="input-clear-button"></span>
+                    <div class='item-input-info'></div>
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+        
+        
+
+
+
+    <li class="item-content item-input">
+        <div class="item-inner">
+            <div class="item-title item-label">$FlightBooking.payment</div>
+            <div class="item-input-wrap">
+          <label class="toggle">
+            <input type="checkbox" name="FlightBooking[payment]" class="FlightBooking_payment" {{${Escape.h}if data.payment}}checked{{/if}} />
+            <span class="toggle-icon"></span>
+          </label>
+            </div>
+        </div>
+    </li>          
+ 
+
+
+ 
+                                                                                        
+        
+
+
+         <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightBooking.member_id</div>
+                <div class="item-input-wrap">
+                    <a class="item-link item-content FlightBooking_member_id" href="#" >
+                        <input type="hidden" name="FlightBooking[member_id]">
+                        <div class="item-inner">
+                          <div class="item-after"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <input type="hidden" name="FlightBooking[id]" value="{{data.id}}" />
+    <input type="hidden" name="FlightBooking[updated_at_long]" value="{{data.updated_at_long}}" />
+</div>                    

@@ -1,0 +1,148 @@
+            
+
+<div id="FlightBookingSeatView" class="view tab current-screen-view">
+
+    <div class="page" style="background-color: #E3E7F2 !important;" id="FlightBookingSeatViewPage" >
+        <div class="navbar hide-navbar-on-scroll" style="background-color: #3F4678 !important;">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="link icon-only panel-open" data-panel="left">
+                          <i class="icon f7-icons ios-only">menu</i>
+                          <i class="icon material-icons md-only">menu</i>
+                    </a>
+                </div>
+                <div class="title sliding">$FlightBookingSeat</div>
+                <div class="subnavbar">
+                    <!-- Searchbar with auto init -->
+                    <form class="searchbar">
+                        <div class="searchbar-inner">
+                            <div class="searchbar-input-wrap">
+                                <input type="search" placeholder="Search">
+                                <i class="searchbar-icon"></i>
+                                <span class="input-clear-button"></span>
+                            </div>
+                            <span class="searchbar-disable-button">Cancel</span>
+                        </div>
+                    </form>
+                </div>                
+                <div class="right">
+                   <a class="link icon-only" href="/new_flight_booking_seat/" >
+                      <i class="icon f7-icons ios-only">add</i>
+                      <i class="icon material-icons md-only">add</i>
+                   </a>
+                </div>
+            </div>
+        </div>
+
+
+  
+        <div class="page-content ptr-content hide-toolbar-on-scroll hide-navbar-on-scroll infinite-scroll-content">
+            <div class="ptr-preloader">
+                <div class="preloader"></div>
+                <div class="ptr-arrow"></div>
+            </div>
+          <div class="list searchbar-found">
+             <ul></ul>
+          </div>
+          <div class='preloader infinite-scroll-preloader'></div>
+          <div class="block searchbar-not-found">
+              <div class="block-inner">Nothing found</div>
+          </div>          
+        </div>
+    </div>
+    
+</div>
+
+<div class="popup popup-tablet-fullscreen" id="FlightBookingSeatHasPopup" >
+    <div class="view popup-view current-screen-view" id="FlightBookingSeatHasView">
+        <div class="page" id="FlightBookingSeatHasViewPage" style="background-color: #E3E7F2 !important;">
+            <div class="navbar hide-navbar-on-scroll" style="background-color: #3F4678 !important;">
+                <div class="navbar-inner sliding">
+                <div class="left">
+                        <a href="#" class="link popup-close FlightBookingSet_close" data-popup="#FlightBookingSeatHasPopup">
+                           <i class="icon f7-icons ios-only">close</i>
+                           <i class="icon material-icons md-only">close</i>
+                        </a>
+                 </div>
+                 <div class="title">
+                    <img src="public/www/images/hkair.png" style="height:28px;" />
+                    <div class="order_no_title" style="font-size:13px;"></div>
+                </div>
+                <div class="right">
+                   <a class="link icon-only new_flight_booking_seat" href="/new_flight_booking_seat/" >
+                      <i class="icon f7-icons ios-only">add</i>
+                      <i class="icon material-icons md-only">add</i>
+                   </a>
+                </div>
+                </div>
+            </div>
+            
+          <div class="toolbar toolbar-bottom-md" style="background-color: #3F4678 !important;" >
+            <div class="toolbar-inner">
+              <a class="link" >&nbsp;</a>
+              <a class="link submit_seat" style="font-size: 22px;">Submit</a>
+              <a class="link" >&nbsp;</a>
+            </div>
+          </div>
+          
+
+            <div class="page-content ptr-content hide-toolbar-on-scroll hide-navbar-on-scroll infinite-scroll-content">
+              <div class="ptr-preloader">
+                <div class="preloader"></div>
+                <div class="ptr-arrow"></div>
+              </div>
+              <div class="list searchbar-found">
+                  <ul></ul>
+              </div>
+              <div class='preloader infinite-scroll-preloader'></div>
+              <div class="block searchbar-not-found">
+                  <!--
+                  <div class="block-inner">No Passengers</div>
+                  -->
+              </div>
+            </div>
+
+            
+            <input type="hidden" name="FlightBookingSeat[flight_booking_id]" class="FlightBookingSeat_flight_booking_id">
+        </div>
+    </div>
+</div>
+
+<div class="popup popup-tablet-fullscreen" id="FlightBookingSeatImagePopup" >
+    <div class="view popup-view current-screen-view" id="FlightBookingSeatImageView">
+        <div class="page" id="FlightBookingSeatImageViewPage" style="background-color: #E3E7F2 !important;">
+            <div class="navbar hide-navbar-on-scroll" style="background-color: #3F4678 !important;">
+                <div class="navbar-inner sliding">
+                <div class="left">
+                        <a href="#" class="link popup-close seat_map_close" data-popup="#FlightBookingSeatImagePopup">
+                           <i class="icon f7-icons ios-only">close</i>
+                           <i class="icon material-icons md-only">close</i>
+                        </a>
+                 </div>
+                 <div class="title">
+                    <img src="public/www/images/hkair.png" style="height:28px;" />
+                    <div class="order_no_title" style="font-size:13px;"></div>
+                </div>
+
+                </div>
+            </div>
+            
+          <div class="toolbar toolbar-bottom-md" style="background-color: #3F4678 !important;">
+            <div class="toolbar-inner">
+              <a class="link" >&nbsp;</a>
+              <a class="link" style="font-size: 22px;" onclick="submitSeat()">Submit</a>
+              <a class="link" >&nbsp;</a>
+            </div>
+          </div>
+          
+            <div class="page-content">
+                <div class="SeatMapBackground"></div>
+               <div class="SeatMapRoot">
+                   <div class="SeatMap"></div>
+               </div>
+            </div>
+            <input type='hidden' value='' class='selected_seat' />
+        </div>
+    </div>
+</div>
+

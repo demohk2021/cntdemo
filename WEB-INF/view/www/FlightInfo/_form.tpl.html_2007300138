@@ -1,0 +1,260 @@
+    
+<div class="block-title">Form</div>
+<div class="list inline-labels no-hairlines-md">
+    <ul>
+
+        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightInfo.flight_no</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$FlightInfo.flight_no" class="FlightInfo_flight_no" name="FlightInfo[flight_no]" value="{{data.flight_no}}"  validate/>
+                    <span class="input-clear-button"></span>
+                    
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+        
+        
+
+
+
+    <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightInfo.schedule_date</div>
+                <div class="item-input-wrap">
+                    <input type="date" class="FlightInfo_schedule_date" name="FlightInfo[schedule_date]" value="{{data.schedule_date}}"  validate />
+                    
+                </div>
+            </div>
+        </li>
+ 
+
+
+ 
+        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightInfo.schedule_time</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$FlightInfo.schedule_time" class="FlightInfo_schedule_time" name="FlightInfo[schedule_time]" value="{{data.schedule_time}}"  validate/>
+                    <span class="input-clear-button"></span>
+                    
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightInfo.arrival_time</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$FlightInfo.arrival_time" class="FlightInfo_arrival_time" name="FlightInfo[arrival_time]" value="{{data.arrival_time}}"  validate/>
+                    <span class="input-clear-button"></span>
+                    
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightInfo.beyond_the_day</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$FlightInfo.beyond_the_day" class="FlightInfo_beyond_the_day" name="FlightInfo[beyond_the_day]" value="{{data.beyond_the_day}}"  validate/>
+                    <span class="input-clear-button"></span>
+                    
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+        
+        
+
+
+         <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightInfo.origin_airport_id</div>
+                <div class="item-input-wrap">
+                    <a class="item-link item-content FlightInfo_origin_airport_id" href="#" >
+                        <input type="hidden" name="FlightInfo[origin_airport_id]">
+                        <div class="item-inner">
+                          <div class="item-after"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+
+        
+        
+
+
+         <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightInfo.destination_airport_id</div>
+                <div class="item-input-wrap">
+                    <a class="item-link item-content FlightInfo_destination_airport_id" href="#" >
+                        <input type="hidden" name="FlightInfo[destination_airport_id]">
+                        <div class="item-inner">
+                          <div class="item-after"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+
+        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightInfo.price</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$FlightInfo.price" class="FlightInfo_price" name="FlightInfo[price]" value="{{data.price}}"  validate/>
+                    <span class="input-clear-button"></span>
+                    
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightInfo.airline_name</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$FlightInfo.airline_name" class="FlightInfo_airline_name" name="FlightInfo[airline_name]" value="{{data.airline_name}}"  validate/>
+                    <span class="input-clear-button"></span>
+                    
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightInfo.icon_css</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$FlightInfo.icon_css" class="FlightInfo_icon_css" name="FlightInfo[icon_css]" value="{{data.icon_css}}"  validate/>
+                    <span class="input-clear-button"></span>
+                    
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightInfo.flight_duration</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$FlightInfo.flight_duration" class="FlightInfo_flight_duration" name="FlightInfo[flight_duration]" value="{{data.flight_duration}}"  validate/>
+                    <span class="input-clear-button"></span>
+                    
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$FlightInfo.flight_note</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$FlightInfo.flight_note" class="FlightInfo_flight_note" name="FlightInfo[flight_note]" value="{{data.flight_note}}"  validate/>
+                    <span class="input-clear-button"></span>
+                    
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+     </ul>
+    <input type="hidden" name="FlightInfo[id]" value="{{data.id}}" />
+    <input type="hidden" name="FlightInfo[updated_at_long]" value="{{data.updated_at_long}}" />
+</div>                    

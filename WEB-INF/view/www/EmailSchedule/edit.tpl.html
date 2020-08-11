@@ -1,0 +1,26 @@
+<div class="page no-toolbar" id="EmailScheduleEditPage">
+    <div class="navbar">
+        <div class="navbar-inner sliding">
+            <div class="left">
+                <a href="#" class="link back back_email_schedule">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+            </div>
+            <div class="title">Edit $EmailSchedule</div>
+        </div>
+    </div>
+    <div class="page-content">
+      <form class="list">
+      #parse('www/EmailSchedule/_form.tpl.html')
+      </form>
+      <div class="block">
+            <p class="row">
+                <button class="button col color-green button-fill button-large save">Save</button>
+            </p>
+            <p class="row">
+                <button class="button col color-red button-fill button-large remove">Remove</button>
+            </p>            
+      </div>      
+    </div>
+</div>

@@ -1,0 +1,275 @@
+formats:
+  datetime: "yyyy-MM-dd'T'HH:mm"
+  date: 'yyyy-MM-dd'
+  time: 'HH:mm'
+  
+common: 
+  unknown_status: '未知状态!'
+  query_failure: '查询失败!'
+  create_failure: '创建失败!'
+  update_failure: '更新失败!'
+  remove_failure: '删除失败!'
+  upload_failure: '上传失败!'
+  file_not_exist: '文件不存在!'  
+  no_permission: '数据加载失败或者没有权限!'
+  old_password_error: '旧密码错误!'  
+  login_failure: '用户名/邮箱或密码错误!'
+  invalid_session: '登陸失效,請重新登陸!' 
+  record_deleted: '數據已經被刪除!'  
+  invalid_length_email: 'Email超出長度限制!'
+  invalid_format_email: 'Email格式錯誤!'
+  no_exists_email: 'Email不存在!'  
+  busy_handle_for_your_request: '系統正在處理你的請求!'
+  invalid_security_code: '無效的安全碼!'
+  expired_security_code: '安全碼已經過期!'
+  validated_security_code: '安全碼已經被使用!'
+  invalid_length_password: '密碼長度必須是6-20位字符!'
+  invalid_format_password: '密碼必須包含一們英文字母!'
+  invalid_client_ip: '客戶端驗證失敗,請重新申請安全碼!'
+  invalid_password: '密碼無效!'
+  invalid_length_username: '用戶名必須是4-20位字符!'
+  invalid_format_username: '用戶名格式錯誤!'
+  exists_username: '用戶名已經被註冊!'
+  invalid_length_email: '郵箱長度必須是5-30個字符!'
+  invalid_format_email: '郵箱格式錯誤!'
+  exists_email: '郵箱已經被註冊!'
+  user_not_active: '用戶沒有激活,請點擊註冊郵件內的【完成註冊】鏈接!'
+  invalid_complete_link: '無效的註冊鏈接!'
+  invalid_cancel_link: '無效的取消鏈接!'
+  invalid_sign_up: '無效的註冊信息!'
+  invalid_active: '用戶之前已經被激活!'
+  invalid_cancel: '用戶不能被取消!'
+  user_canceled: '註冊信息已被刪除!'
+  active_completed: '已完成激活，請登入!'
+  
+view: 
+  general: '常规'
+  advanced: '高级'
+  index: '首页'
+  list: '列表'
+  new: '新建'
+  edit: '编辑'
+  save: '保存'
+  remove: '删除' 
+  saving: '正在保存...'
+  removing: '正在删除...'
+  search: '搜索'
+  searching: '正在搜索...'
+  please_select: '请选择'
+  logout: '退出'
+  created_at: '创建时间'
+  updated_at: '更新时间'  
+  created_user_name: '创建用户'
+  updated_user_name: '更新用户'    
+  change_password: '更新密碼'
+  please_type_password: '請輸入新密碼!'
+  inconsistent_password: '新密碼不一致!'
+  changing: '正在更新'
+  enter_your_new_password: '輸入你的新密碼'
+  changed: '更新完成' 
+  sign_in: '登入'
+  username_or_email: '用戶名或郵箱'
+  username: '用戶名'
+  email: '郵箱'
+  password: '密碼'
+  forgot_or_reset_password: '忘記或重置密碼'
+  need_new_account: '需要新的帳號?'
+  create_account: '新建帳號'
+  home: '首頁'
+  terms: '條款'
+  privacy: '隱私政策'
+  contact: '聯繫我們'
+  authorizing: '正在授權'
+  checking: '正在檢驗'
+  please_type_username_field: '請輸入用戶名或郵箱!'
+  please_type_password_field: '請輸入密碼!'
+  please_type_security_code: '請輸入安全碼'
+  please_type_email: '請輸入你的註冊郵箱'
+  please_type_username: '請輸入你的用戶名'
+  waiting: '正在等待'
+  submit_security_code: '提交安全碼'
+  send_security_code: '發送安全碼'
+  sending: '正在發送'
+  entry_your_email_address: '輸入你的註冊郵箱'
+  reset_your_password: '重置密碼'
+  sign_up: '註冊'
+  your_username: '你的登入名稱'
+  your_email: '你的電子郵箱'
+  your_password: '你的登入密碼'
+  registering: '正在註冊'
+  pending_register_msg: '請查看註冊郵件並點擊【完成註冊】鏈接!'
+  are_you_sure_to_logout: '確定退出系統嗎?'
+  
+errors: 
+  ALL: 
+    ALL:
+      type:
+        message: "{0}{1}数据类型错误"
+      uniqueness:
+        message: "{0}{1}已经存在"
+      number: 
+        greater_than: "{0}{1}必须大于{3}"
+        greater_than_or_equal_to: "{0}{1}必须大于或等于{3}"
+        equal_to: "{0}{1}必须等于{3}"
+        less_than: "{0}{1}必须小于{3}"
+        less_than_or_equal_to: "{0}{1}必须小于或等于{3}"
+        odd: "{0}{1}必须是奇数"
+        even: "{0}{1}必须是偶数"
+      presence: 
+        message: "{0}{1}不能为空"
+      length:
+        is: "{0}{1}没符合(应该是{3}个字符)"
+        minimum: "{0}{1}太短(最短为{3}个字符)"
+        maximum: "{0}{1}太长(最长为{3}个字符)"
+        within: "{0}{1}必须在这范围{3}"
+      inclusion:
+        in: "{0}{1}不包括在列表中"
+      format:
+        with:  "{0}{1}没符合规则"
+      exclusion: 
+        in: "{0}{1}被保留"
+      date: 
+        is: "{0}{1}必须是{3}"
+        minimum: "{0}{1}太小(最小为{3})"
+        maximum: "{0}{1}太大(最大为{3})"
+        within: "{0}{1}必须在这范围{3}"
+      timestamp:
+        is: "{0}{1}必须是{3}"
+        minimum: "{0}{1}太小(最小为{3})"
+        maximum: "{0}{1}太大(最大为{3})"
+        within: "{0}{1}必须在这范围{3}"
+      time: 
+        is: "{0}{1}必须是{3}"
+        minimum: "{0}{1}太小(最小为{3})"
+        maximum: "{0}{1}太大(最大为{3})"
+        within: "{0}{1}必须在这范围{3}"
+        
+         
+models: 
+  EmailSchedule: Email Schedule
+  JobProcess: Job Process
+  Member: Member
+  EventSchedule: Event Schedule
+  FlightBookingSeat: Flight Booking Seat
+  RolePermission: Role Permission
+  User: User
+  SecurityCode: Security Code
+  Sequence: Sequence
+  FlightInfo: Flight Info
+  Role: Role
+  Job: Job
+  Airport: Airport
+  FlightBooking: Flight Booking
+attributes: 
+  EmailSchedule: 
+    to_list: TO
+    cc_list: CC
+    bcc_list: BCC
+    subject: Subject
+    message: Message
+    response_msg: Respone Message
+    status: Status
+    action: Action
+    response_code: Response Code
+    process_host: Process Host
+    user_id: User
+    attachement: Attachement
+  JobProcess: 
+    job_id: Job
+    hostname: Hostname
+    end_time: End Time
+    final_fire_time: Final Fire Time
+    next_fire_time: Next Fire Time
+    previous_fire_time: Previous Fire Time
+    state: State
+  Member: 
+    name: Name
+    phone: Phone
+    passport: Passport
+    credit_card_no: Credit Card No
+    expiry_date: Expiry Date
+    holder_name: Holder Name
+  EventSchedule: 
+    user_id: User
+    title: Title
+    start_at: Start
+    end_at: End
+    notes: Notes
+    location: Location
+    reminder: Reminder
+    calendar_code: Calendar
+    web_link: Link
+    all_day: All Day
+  FlightBookingSeat: 
+    flight_booking_id: Flight Booking
+    ticket_no: Ticket No
+    passenger_name: Your Name
+    passport_no: Passport No
+    age: Your Age
+    seat_no: Seat No
+  RolePermission: 
+    role_id: Role
+    model: Model
+    action: Action
+  User: 
+    role_id: Role
+    member_id: Member
+    username: User Name
+    email: Email
+    sign_in_password: Password
+    session_token: Session Token
+    active: Active
+  SecurityCode: 
+    user_id: User
+    code: Code
+    expired_at: Expired At
+    action: Action
+    status: Status
+  Sequence: 
+    model: Model
+    prefix: Prefix
+    display_prefix: Display Prefix
+    step: Step
+    len: Length
+    split_char: Split
+    current: Current Value
+    ftime: Time Format
+    clear_rule: Clear Rule
+    next_clear_at: Restore Time
+    owner_hostname: Host Name
+    note: Note
+  FlightInfo: 
+    flight_no: Flight No
+    schedule_date: Schedule Date
+    schedule_time: Schedule Time
+    arrival_time: Arrival Time
+    beyond_the_day: Beyond the day
+    origin_airport_id: Origin
+    destination_airport_id: Destination
+    price: Price
+    airline_name: Airline
+    icon_css: ICON CSS
+    flight_duration: Flight Duration
+    flight_note: Flight Note
+  Role: 
+    name: Name
+    code: Code
+  Job: 
+    job_group: Job Group
+    job_name: Job Name
+    trigger_group: Trigger Group
+    trigger_name: Trigger Name
+    cron_expression: Cron Expression
+    classify: Classify
+    hostnames: Hostname
+    comment: Comment
+    pause_job: Pause Job
+    paused_at: Paused At
+  Airport: 
+    code: Code
+    name: Name
+    search_keywords: Search Keywords
+  FlightBooking: 
+    flight_info_id: Flight Info
+    order_no: Order No
+    member_id: Member

@@ -1,0 +1,27 @@
+ 
+attributes: 
+  job_id: 
+    type: String
+    default: ~
+  hostname: 
+    type: String
+    default: ~
+  end_time: 
+    type: Timestamp
+    format: "yyyy-MM-dd HH:mm:ss"
+    default: ~
+  final_fire_time: 
+    type: Timestamp
+    format: "yyyy-MM-dd HH:mm:ss"
+    default: ~
+  next_fire_time: 
+    type: Timestamp
+    format: "yyyy-MM-dd HH:mm:ss"
+    default: ~
+  previous_fire_time: 
+    type: Timestamp
+    format: "yyyy-MM-dd HH:mm:ss"
+    default: ~
+  state: 
+    type: String
+    default: ~

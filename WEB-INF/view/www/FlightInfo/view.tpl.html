@@ -1,0 +1,328 @@
+<div id="FlightInfoView" class="view tab current-screen-view">
+
+    <div class="page" id="FlightInfoViewPage" style="background-color: #E3E7F2 !important;">
+        <div class="navbar hide-navbar-on-scroll" style="background-color: #3F4678 !important;">
+            <div class="navbar-inner">
+                <div class="title">
+                    <img src="public/www/images/hkair.png" style="height:32px;" />
+                </div>
+                <!--
+                <div class="right">
+                   <a class="link icon-only" href="/new_flight_info/" >
+                      <i class="icon f7-icons ios-only">add</i>
+                      <i class="icon material-icons md-only">add</i>
+                   </a>
+                </div>
+                -->
+            </div>
+        </div>
+
+
+        <div class="page-content ptr-content hide-toolbar-on-scroll hide-navbar-on-scroll infinite-scroll-content">
+            <div class="hide_flight_info_link"></div>
+            <div class="card hide-toolbar-on-scroll" style="background-color: #1b93c2;">
+                <table style="padding-left: 18px;padding-top:12px;">
+                    <tr>
+                        <td width="84px">
+                            <div class="item-title item-label" style="display: inline-block;text-align: center;vertical-align: middle;width:80px;height:36px;background-color:skyblue;border:auto;border-radius:3px;">
+                                <a style="margin:auto;margin-top:10px;display: inline-block;color:#FFFFFF;font-size:14px;">One-Way</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="item-title item-label" style="display: inline-block;text-align: center;vertical-align: middle;width:80px;height:36px;background-color: #FFFFFF;border-color:red;border: 1px;border-radius:3px;">
+                                <a style="margin:auto;margin-top:10px;display: inline-block;color:#000000;font-size:14px;">Round-Trip</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="card-content list inline-labels no-hairlines-md" style="padding:5px;padding-top:10px;padding-bottom:10px;">
+                    <ur>
+                        <li class="item-content item-input">
+                            <div class="item-inner" style="padding-top:3px;padding-bottom:3px;">
+                                <div class="item-title item-label" style="width:46px;height:40px;background-color: #FFFFFF;border: auto;border-radius:3px;">
+                                    <i class="icon list-icon-FlightInfo_origin_airport_id"></i>
+                                </div>
+                                <div class="item-input-wrap">
+                                    <a class="item-link item-content FlightInfo_origin_airport_id" href="#" style="background-color: #FFFFFF;  border: auto;border-radius:3px;">
+                                        <input type="hidden" name="FlightInfo[origin_airport_id]">
+                                        <div class="item-inner">
+                                          <div class="item-after" style="font-size:16px;color:black;">$FlightInfo.origin_airport_id</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="item-content item-input">
+                            <div class="item-inner" style="padding-top:3px;padding-bottom:3px;">
+                                <div class="item-title item-label" style="width:46px;height:40px;background-color: #FFFFFF;border: auto;border-radius:3px;">
+                                    <i class="icon list-icon-FlightInfo_destination_airport_id"></i>
+                                </div>
+                                <div class="item-input-wrap">
+                                    <a class="item-link item-content FlightInfo_destination_airport_id" href="#" style="background-color: #FFFFFF;  border: auto;border-radius:3px;">
+                                        <input type="hidden" name="FlightInfo[destination_airport_id]">
+                                        <div class="item-inner">
+                                          <div class="item-after" style="font-size:16px;color:black;">$FlightInfo.destination_airport_id</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="item-content">
+                            <div class="item-inner" style="padding-top:3px;padding-bottom:3px;">
+                                <div class="item-title item-label" style="width:46px;height:40px;background-color: #FFFFFF;border: auto;border-radius:3px;">
+                                    <i class="icon list-icon-FlightInfo_scheduled_at"></i>
+                                </div>
+                                <div class="item-input-wrap">
+
+                                    <a class="item-content FlightInfo_scheduled_at" href="#" style="background-color: #FFFFFF;  border: auto;border-radius:3px;">
+                                        <input type="text" class="FlightInfo_scheduled_at_input" name="FlightInfo[scheduled_at]" style="font-size:16px;background-color: #FFFFFF;width:100%;border: auto;border-radius:3px;max-width:100%;text-align:right;padding-right:20px;" />
+                                    </a>
+
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li class="item-content">
+                            <div class="item-inner" style="padding-top:3px;padding-bottom:3px;">
+                                <div class="item-title item-label" style="width:46px;height:40px;background-color: #FFFFFF;border: auto;border-radius:3px;">
+                                    <i class="icon list-icon-FlightInfo_person"></i>
+                                </div>
+                                <div class="item-input-wrap" style="text-align:right;">
+
+                                    <a class="item-content FlightInfo_passengers" href="#" style="font-size:16px;color:black;display: inline-block;width:100%;text-align:right;background-color: #FFFFFF;  border: auto;border-radius:3px;padding-right:20px;padding-top:10px;">
+                                        <!--
+                                        <input type="text" value="1 Passenger,Economy" class="FlightInfo_passengers_input" style="padding-right:20px;background-color: #FFFFFF;width:100%;border: auto;border-radius:3px;max-width:100%;text-align:right;" />
+                                        -->
+                                        1 Passenger,Economy
+                                    </a>
+
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="item-content">
+
+                            <div class="item-inner" style="padding-top:3px;padding-bottom:3px;">
+                                <!--
+                                <div class="item-title item-label" style="width:46px;height:40px;background-color: #FFFFFF;border: auto;border-radius:3px;">
+                                   
+                                </div>
+                                -->
+                                <div class="item-input-wrap">
+                                    <a class="item-content FlightInfoSearch" href="#" style="background-color:skyblue;border: auto;border-radius:3px;">
+                                        <i class="icon list-icon-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ur>
+                </div>
+            </div>
+
+
+            <!--
+            <div class="block" style="width:100%;text-align: center;vertical-align:middle;">
+                <input type="button" class="FlightInfoSearch" value="Search" style="color:gainsboro;font-size:16px;background-color: #1b93c2;width:80px;height:80px;border-radius:50%;border:none">
+            </div>
+            -->
+
+
+            <div class="ptr-preloader">
+                <div class="preloader"></div>
+                <div class="ptr-arrow"></div>
+            </div>
+            <div class="data_list list searchbar-found">
+                <ul></ul>
+            </div>
+            <div class='preloader infinite-scroll-preloader'></div>
+            <div class="block searchbar-not-found">
+                <div class="block-inner">Nothing found</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="popup popup-tablet-fullscreen" id="FlightInfoHasPopup">
+    <div class="view popup-view current-screen-view" id="FlightInfoHasView">
+        <div class="page" id="FlightInfoHasViewPage">
+            <div class="navbar hide-navbar-on-scroll">
+                <div class="navbar-inner sliding">
+                    <div class="left">
+                        <a href="#" class="link popup-close" data-popup="#FlightInfoHasPopup">
+                           <i class="icon f7-icons ios-only">close</i>
+                           <i class="icon material-icons md-only">close</i>
+                        </a>
+                    </div>
+                    <div class="title">$FlightInfo</div>
+                    <div class="subnavbar">
+                        <!-- Searchbar with auto init -->
+                        <form class="searchbar">
+                            <div class="searchbar-inner">
+                                <div class="searchbar-input-wrap">
+                                    <input type="search" placeholder="Search">
+                                    <i class="searchbar-icon"></i>
+                                    <span class="input-clear-button"></span>
+                                </div>
+                                <span class="searchbar-disable-button">Cancel</span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="right">
+                        <a href="/new_flight_info/" class="link">
+                   <i class="icon f7-icons ios-only">add</i>
+                   <i class="icon material-icons md-only">add</i>
+                </a>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content ptr-content hide-toolbar-on-scroll hide-navbar-on-scroll infinite-scroll-content">
+                <div class="ptr-preloader">
+                    <div class="preloader"></div>
+                    <div class="ptr-arrow"></div>
+                </div>
+
+                <div class="list searchbar-found">
+                    <ul></ul>
+                </div>
+                <div class='preloader infinite-scroll-preloader'></div>
+                <div class="block searchbar-not-found">
+                    <div class="block-inner">Nothing found</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popover FlightInfo_popover-links">
+    <div class="popover-inner">
+        <div class="list">
+            <ul>
+                <li><a class="list-button item-link view_has_flight_booking popover-close" href="#">$FlightBooking</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup popup-tablet-fullscreen" id="FlightInfoPassengerPopup">
+    <div class="view popup-view current-screen-view" id="FlightInfoPassengerView">
+        <div class="page" id="FlightInfoPassengerViewPage" style="background-color: #E3E7F2 !important;">
+            <div class="navbar hide-navbar-on-scroll" style="background-color: #3F4678 !important;">
+                <div class="navbar-inner">
+
+
+                    <div class="left">
+                        <a href="#" class="link popup-close passenger_back" data-popup="#FlightInfoPassengerPopup">
+                           <i class="icon f7-icons ios-only icon-back">back</i>
+                           <i class="icon material-icons md-only icon-back">back</i>
+                        </a>
+                    </div>
+
+                    <div class="title">
+                        <!--
+                        <img src="public/www/images/hkair.png" style="height:32px;" />
+                        -->
+                        Passengers
+                    </div>
+                </div>
+            </div>
+            <div class="page-content">
+
+                <!--begin-->
+                <div class="card">
+                    <div class="card-content">
+
+
+                        <div class="list inline-labels no-hairlines-md">
+                            <ul>
+
+
+
+
+
+
+
+                                <li class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Adults</div>
+                                        <div class="item-input-wrap">
+                                            <div class="stepper stepper-raised stepper-init">
+                                                <div class="stepper-button-minus"></div>
+                                                <div class="stepper-input-wrap">
+                                                    <input type="text" class="adults_input" value="1" min="0" max="100" step="1" readonly>
+                                                </div>
+                                                <div class="stepper-button-plus"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <li class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Children</div>
+                                        <div class="item-input-wrap">
+                                            <div class="stepper stepper-raised stepper-init">
+                                                <div class="stepper-button-minus"></div>
+                                                <div class="stepper-input-wrap">
+                                                    <input type="text" class="adults_input" value="0" min="0" max="100" step="1" readonly>
+                                                </div>
+                                                <div class="stepper-button-plus"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <li class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Infants</div>
+                                        <div class="item-input-wrap">
+                                            <div class="stepper stepper-raised stepper-init">
+                                                <div class="stepper-button-minus"></div>
+                                                <div class="stepper-input-wrap">
+                                                    <input type="text" class="adults_input" value="0" min="0" max="100" step="1" readonly>
+                                                </div>
+                                                <div class="stepper-button-plus"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+
+
+
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <!--end-->
+
+
+
+                <div class="block">
+                    <p class="row">
+                        <button class="col button button-fill color-demo-button button-big" onclick="$$('.passenger_back').click();">Economy</button>
+                        <button class="col button button-fill  button-big color-white text-color-black">Business</button>
+                    </p>
+                    <p class="row">
+                        <button class="col button button-fill  button-big color-white text-color-black">Premium economy</button>
+                        <button class="col button button-fill  button-big color-white text-color-black">First</button>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

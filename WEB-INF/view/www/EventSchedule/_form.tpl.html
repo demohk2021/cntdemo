@@ -1,0 +1,214 @@
+    
+<div class="block-title">Form</div>
+<div class="list inline-labels no-hairlines-md">
+    <ul>
+
+        
+        
+
+
+         <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$EventSchedule.user_id</div>
+                <div class="item-input-wrap">
+                    <a class="item-link item-content EventSchedule_user_id" href="#" >
+                        <input type="hidden" name="EventSchedule[user_id]">
+                        <div class="item-inner">
+                          <div class="item-after"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+
+                                                                                                                                                                        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$EventSchedule.title</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$EventSchedule.title" class="EventSchedule_title" name="EventSchedule[title]" value="{{data.title}}"  required minlength=1 maxlength=200 validate/>
+                    <span class="input-clear-button"></span>
+                    <div class='item-input-info'></div>
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+                                                                                        
+        
+
+
+
+    <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$EventSchedule.start_at</div>
+                <div class="item-input-wrap">
+                    <input type="datetime-local" class="EventSchedule_start_at" name="EventSchedule[start_at]" value="{{data.start_at}}"  required validate />
+                    <div class='item-input-info'></div>
+                </div>
+            </div>
+    </li>                    
+ 
+
+
+ 
+                                                                                        
+        
+
+
+
+    <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$EventSchedule.end_at</div>
+                <div class="item-input-wrap">
+                    <input type="datetime-local" class="EventSchedule_end_at" name="EventSchedule[end_at]" value="{{data.end_at}}"  required validate />
+                    <div class='item-input-info'></div>
+                </div>
+            </div>
+    </li>                    
+ 
+
+
+ 
+        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$EventSchedule.notes</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$EventSchedule.notes" class="EventSchedule_notes" name="EventSchedule[notes]" value="{{data.notes}}"  validate/>
+                    <span class="input-clear-button"></span>
+                    
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$EventSchedule.location</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$EventSchedule.location" class="EventSchedule_location" name="EventSchedule[location]" value="{{data.location}}"  validate/>
+                    <span class="input-clear-button"></span>
+                    
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$EventSchedule.reminder</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$EventSchedule.reminder" class="EventSchedule_reminder" name="EventSchedule[reminder]" value="{{data.reminder}}"  validate/>
+                    <span class="input-clear-button"></span>
+                    
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+                                                                                        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$EventSchedule.calendar_code</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$EventSchedule.calendar_code" class="EventSchedule_calendar_code" name="EventSchedule[calendar_code]" value="{{data.calendar_code}}"  required validate/>
+                    <span class="input-clear-button"></span>
+                    <div class='item-input-info'></div>
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+        
+        
+
+
+
+
+        <li class="item-content item-input">
+            <div class="item-inner">
+                <div class="item-title item-label">$EventSchedule.web_link</div>
+                <div class="item-input-wrap">
+                    <input type="text" placeholder="$EventSchedule.web_link" class="EventSchedule_web_link" name="EventSchedule[web_link]" value="{{data.web_link}}"  validate/>
+                    <span class="input-clear-button"></span>
+                    
+                </div>
+            </div>
+        </li>                    
+
+
+ 
+
+
+ 
+        
+        
+
+
+
+    <li class="item-content item-input">
+        <div class="item-inner">
+            <div class="item-title item-label">$EventSchedule.all_day</div>
+            <div class="item-input-wrap">
+          <label class="toggle">
+            <input type="checkbox" name="EventSchedule[all_day]" class="EventSchedule_all_day" {{${Escape.h}if data.all_day}}checked{{/if}} />
+            <span class="toggle-icon"></span>
+          </label>
+            </div>
+        </div>
+    </li>          
+ 
+
+
+     </ul>
+    <input type="hidden" name="EventSchedule[id]" value="{{data.id}}" />
+    <input type="hidden" name="EventSchedule[updated_at_long]" value="{{data.updated_at_long}}" />
+</div>                    

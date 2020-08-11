@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+
+<head>
+    <meta charset="utf-8">
+    <!--
+  Customize this policy to fit your own app's needs. For more guidance, see:
+      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+  Some notes:
+      * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+      * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+      * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+          * Enable inline JS: add 'unsafe-inline' to default-src
+  -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#2196f3">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>AA_Demo_1</title>
+
+    <link rel="stylesheet" href="$Support.env().get('cdn_url')/framework7/framework7/css/framework7.min.css">
+    <link rel="stylesheet" href="resource/www/css/Icons.css">
+    <link rel="stylesheet" href="resource/www/css/App.css" />
+
+</head>
+
+<body>
+    <div id="app">
+
+        <div class="statusbar"></div>
+        <div class="views tabs">
+            ##parse('www/Home/_toolbar.tpl.html') 
+                                                                          #parse('www/FlightInfo/view.tpl.html')
+                                                       
+                                            #parse('www/EmailSchedule/view.tpl.html')
+                                                            #parse('www/JobProcess/view.tpl.html')
+                                                            #parse('www/Member/view.tpl.html')
+                                                            #parse('www/EventSchedule/view.tpl.html')
+                                                            #parse('www/FlightBookingSeat/view.tpl.html')
+                                                            #parse('www/RolePermission/view.tpl.html')
+                                                            #parse('www/User/view.tpl.html')
+                                                            #parse('www/SecurityCode/view.tpl.html')
+                                                            #parse('www/Sequence/view.tpl.html')
+                                                                                        #parse('www/Role/view.tpl.html')
+                                                            #parse('www/Job/view.tpl.html')
+                                                            #parse('www/Airport/view.tpl.html')
+                                                            #parse('www/FlightBooking/view.tpl.html')
+                                    </div>
+                                                #parse('www/Home/_navbar.tpl.html')
+        
+    </div>
+
+    <script src="$Support.env().get('cdn_url')/framework7/framework7/js/framework7.min.js"></script>
+    <script>
+        var $$ = Dom7;
+        var app;
+    </script>
+    <script src="/resource/www/js/Cache.js"></script>
+    <script src="/public/www/js/ActiveRecord-f7.js"></script>
+    <script src="/public/www/js/Query-f7.js"></script>
+    <script src="/EmailSchedule/include/view.js"></script>
+    <script src="/JobProcess/include/view.js"></script>
+    <script src="/Member/include/view.js"></script>
+    <script src="/EventSchedule/include/view.js"></script>
+    <script src="/FlightBookingSeat/include/view.js"></script>
+    <script src="/RolePermission/include/view.js"></script>
+    <script src="/User/include/view.js"></script>
+    <script src="/SecurityCode/include/view.js"></script>
+    <script src="/Sequence/include/view.js"></script>
+    <script src="/FlightInfo/include/view.js"></script>
+    <script src="/Role/include/view.js"></script>
+    <script src="/Job/include/view.js"></script>
+    <script src="/Airport/include/view.js"></script>
+    <script src="/FlightBooking/include/view.js"></script>
+    <script src="/resource/www/js/Routes.js"></script>
+    <script src="/resource/www/js/App.js"></script>
+    
+</body>
+
+</html>

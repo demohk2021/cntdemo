@@ -1,0 +1,68 @@
+ 
+attributes: 
+  job_group: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+    validates_length_of: 
+      allow_blank: false
+      maximum: 20
+      minimum: &6 1
+      on: save
+  job_name: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+    validates_uniqueness_of: 
+      allow_blank: false
+      or:  {}
+      and:  {}
+      scope: []
+      on: save
+  trigger_group: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+    validates_length_of: 
+      allow_blank: false
+      maximum: &16 50
+      minimum: *6
+      on: save
+  trigger_name: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+    validates_length_of: 
+      allow_blank: false
+      maximum: *16
+      minimum: *6
+      on: save
+  cron_expression: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+  classify: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+  hostnames: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+  comment: 
+    type: String
+    default: ~
+  pause_job: 
+    type: Boolean
+    default: true
+  paused_at: 
+    type: Timestamp
+    format: "yyyy-MM-dd HH:mm:ss"
+    default: ~

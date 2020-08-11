@@ -1,0 +1,59 @@
+ 
+attributes: 
+  role_id: 
+    type: String
+    default: ~
+  member_id: 
+    type: String
+    default: ~
+  username: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+    validates_length_of: 
+      allow_blank: false
+      maximum: 10
+      minimum: 4
+      on: save
+    validates_format_of: 
+      allow_blank: false
+      with: "[\\w]{4,20}$"
+      on: save
+    validates_uniqueness_of: 
+      allow_blank: false
+      or:  {}
+      and:  {}
+      scope: []
+      on: save
+  email: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+    validates_length_of: 
+      allow_blank: false
+      maximum: 50
+      minimum: 5
+      on: save
+    validates_format_of: 
+      allow_blank: false
+      with: "^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$"
+      on: save
+    validates_uniqueness_of: 
+      allow_blank: false
+      or:  {}
+      and:  {}
+      scope: []
+      on: save
+  sign_in_password: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+  session_token: 
+    type: String
+    default: ~
+  active: 
+    type: Boolean
+    default: ~

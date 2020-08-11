@@ -1,0 +1,20 @@
+ 
+attributes: 
+  role_id: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+  model: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+    validates_length_of: 
+      allow_blank: false
+      maximum: 50
+      minimum: 2
+      on: save
+  action: 
+    type: String
+    default: ~

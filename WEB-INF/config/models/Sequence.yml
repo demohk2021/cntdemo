@@ -1,0 +1,51 @@
+ 
+attributes: 
+  model: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+    validates_uniqueness_of: 
+      allow_blank: false
+      or:  {}
+      and:  {}
+      scope: []
+      on: save
+  prefix: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+  display_prefix: 
+    type: Boolean
+    default: false
+  step: 
+    type: Integer
+    default: 1
+  len: 
+    type: Integer
+    default: 6
+  split_char: 
+    type: String
+    default: -
+  current: 
+    type: Integer
+    default: 0
+  ftime: 
+    type: String
+    default: yyyyMM
+  clear_rule: 
+    type: String
+    default: Month
+  next_clear_at: 
+    type: Timestamp
+    format: "yyyy-MM-dd HH:mm:ss"
+    default: ~
+  owner_hostname: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+  note: 
+    type: String
+    default: ~

@@ -1,0 +1,34 @@
+root: 
+  controller: Home
+  action: index
+
+admin: 
+  controller: Root
+  action: index
+  
+resource:
+  controller: Resource 
+  action: include
+      
+signIn: 
+  controller: Home
+  action: signIn
+    
+login: 
+  controller: Home
+  action: login
+  
+logout: 
+  controller: Home
+  action: logout
+  
+complete:
+  controller: Home
+  action: complete
+
+cancel:
+  controller: Home
+  action: cancel
+  
+  
+domain_route: ~

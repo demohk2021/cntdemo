@@ -1,0 +1,15 @@
+ 
+attributes: 
+  code: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+  name: 
+    type: String
+    default: ~
+    validates_presence_of: 
+      on: save
+  search_keywords: 
+    type: String
+    default: ~

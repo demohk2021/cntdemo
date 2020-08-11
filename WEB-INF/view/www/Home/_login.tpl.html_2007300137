@@ -1,0 +1,63 @@
+<div class="popup popup-tablet-fullscreen" id="LoginPopup">
+    <div class="view popup-view current-screen-view" id="LoginView">
+        <div class="page" id="LoginViewPage">
+            <div class="navbar hide-navbar-on-scroll">
+                <div class="navbar-inner sliding">
+                    <div class="left">
+                        <a href="#" class="link popup-close" data-popup="#LoginPopup">
+                           <i class="icon f7-icons ios-only">close</i>
+                           <i class="icon material-icons md-only">close</i>
+                        </a>
+                    </div>
+                    <div class="title">Login</div>
+                </div>
+            </div>
+            
+          <div class="page-content">
+          <form class="list">
+            <div class="list inline-labels no-hairlines-md">
+              <ul>
+                  
+                 <li class="item-content item-input">
+                    <div class="item-media">
+                        <i class="icon icon-username"></i>
+                    </div>                     
+                    <div class="item-inner">
+                        <div class="item-input-wrap">
+                            <input type="text" placeholder="Username or email" class="username" name="username" />
+                            <span class="input-clear-button"></span>
+                            <div class='item-input-info'></div>
+                        </div>
+                    </div>
+                 </li>  
+                 
+                 <li class="item-content item-input">
+                    <div class="item-media">
+                        <i class="icon  icon-password"></i>
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-input-wrap">
+                            <input type="password" placeholder="Password" class="password" name="password" />
+                            <span class="input-clear-button"></span>
+                            <div class='item-input-info'></div>
+                        </div>
+                    </div>
+                 </li> 
+    
+                 
+              </ul>          
+            </div>
+          </form>
+          <div class="block">
+                <p class="row">
+                    <button class="button col color-green button-fill button-large login">Login</button>
+                </p>
+                <p class="row">
+                    <button class="button col color-red button-fill button-large create">Create an account</button>
+                </p>            
+          </div>      
+        </div>
+    
+        </div>
+    </div>
+</div>
