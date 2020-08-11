@@ -3,8 +3,8 @@
 	<property environment="env" />
 	<property name="jr.charset" value="UTF-8" />
 	<property name="jr.root" location="../" />
-	<property name="jr.war" value="/src/data/o3dg9c577o48ncko.war" />
-	<property name="jr.sql" value="/src/data/o3dg9c577o48ncko.sql" />
+	<property name="jr.war" value="./userContent/cntdemo.war" />
+	<property name="jr.sql" value="./userContent/cntdemo.sql" />
 	<property name="jr.src" value="${jr.root}/WEB-INF/src" />
 	<property name="jr.lib" value="${jr.root}/WEB-INF/lib" />
 	<property name="jr.classes" value="${jr.root}/WEB-INF/classes" />
