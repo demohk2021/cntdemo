@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: cntdemo 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: cntdemo 
+    spec:
+      containers:
+        - name: cntdemo 
+          image: enscontainerregistry.azurecr.io/cntdemo
+          ports:
+          - containerPort: 80
