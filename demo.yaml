@@ -1,0 +1,3 @@
+containers:
+- name: demo
+  image: enscontainerregistry.azurecr.io/demo:r1
