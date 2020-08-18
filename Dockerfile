@@ -1,3 +1,3 @@
-FROM jackyip8/test_docker_hub:aatomcatimage1
+FROM jackyip8/aademo:v1
 
 MAINTAINER jack@1225.hk
