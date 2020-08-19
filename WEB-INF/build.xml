@@ -3,8 +3,8 @@
 	<property environment="env" />
 	<property name="jr.charset" value="UTF-8" />
 	<property name="jr.root" location="../" />
-	<property name="jr.war" value="./userContent/cntdemo.war" />
-	<property name="jr.sql" value="./userContent/cntdemo.sql" />
+	<property name="jr.war" value="/src/lib/tomcat/default/webapps/ROOT.war" />
+	<property name="jr.sql" value="/src/lib/tomcat/default/webapps/MySql.sql" />
 	<property name="jr.src" value="${jr.root}/WEB-INF/src" />
 	<property name="jr.lib" value="${jr.root}/WEB-INF/lib" />
 	<property name="jr.classes" value="${jr.root}/WEB-INF/classes" />

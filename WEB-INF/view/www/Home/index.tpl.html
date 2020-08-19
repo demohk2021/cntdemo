@@ -19,7 +19,7 @@
     <meta name="theme-color" content="#2196f3">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
-    <title>AA_Demo_1</title>
+    <title>AA Demo</title>
 
     <link rel="stylesheet" href="$Support.env().get('cdn_url')/framework7/framework7/css/framework7.min.css">
     <link rel="stylesheet" href="resource/www/css/Icons.css">
@@ -27,7 +27,28 @@
 
 </head>
 
-<body>
+<body style="background-color: #90CDFC !important;">
+    <div class="main_div start_image"> 
+            <img class="logo" src="public/www/images/logo_m.png"  />
+            <div class="home_title"><b>Good Morning!</b></div>
+            <div class="sub_div">  
+                <div class="p">
+                   <div class="button_css flights_button" >
+                       <a onclick="$$('.main_div').remove();" class="button_link">
+                          <font style="color:#FFFFFF;">Book a Trip</font>
+                       </a>
+                   </div>
+                   <!--<span style="display: inline-block;width:10px;"></span>-->
+                   <br/>
+                   <div style="height:14px;">&nbsp;</div>
+                   <div class="button_css flights_button">
+                       <a class="button_link">
+                            <font style="color:#FFFFFF;">Manage Booking</font>
+                       </a>
+                   </div>
+                </div> 
+            </div> 
+    </div> 
     <div id="app">
 
         <div class="statusbar"></div>

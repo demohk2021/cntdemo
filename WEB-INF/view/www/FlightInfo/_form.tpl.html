@@ -3,9 +3,10 @@
         <div class="list media-list">
             <ul style="padding-left:10px;">
                 <li class="item-content">
-                    <div class="item-media">
-                        <i class="icon list-icon-FlightInfo"></i>
-                    </div>
+                        <div class="row no-gap">
+                            <div class="col-100" style="padding-left:10px;"><i class="icon list-icon-{{data.icon_css}}"></i></div>
+                            <div class="col-100" style="padding-left:4px;padding-top:2px;">{{data.flight_no}}</div>
+                        </div>
                     <div class="item-inner">
                         <div class="item-title-row">
 
@@ -62,18 +63,24 @@
 
                 <li class="item-content item-input">
                     <div class="item-inner">
-                        <div class="item-title item-label">$FlightInfo.flight_no</div>
+
+                            <div class="item-title item-label" style="width:46px;height:40px;background-color: #FFFFFF;border: auto;border-radius:3px;">
+                               <i class="icon list-icon-FlightInfo_flight_no"></i>
+                            </div>
+  
                         <div class="item-input-wrap">
-                            <input type="text" value="{{data.flight_no}}" readonly  />
+                            <input type="text" value="{{data.flight_no}}" readonly style="padding-left:30px;" />
                         </div>
                     </div>
                 </li>
                 
                 <li class="item-content item-input">
                     <div class="item-inner">
-                        <div class="item-title item-label">$FlightInfo.schedule_date</div>
+                        <div class="item-title item-label" style="width:46px;height:40px;background-color: #FFFFFF;border: auto;border-radius:3px;">
+                            <i class="icon list-icon-FlightInfo_scheduled_at"></i>
+                        </div>
                         <div class="item-input-wrap">
-                            <input type="text" value="{{data.schedule_date}}" readonly  />
+                            <input type="text" value="{{data.schedule_date}}" readonly style="padding-left:30px;" />
                         </div>
                     </div>
                 </li>                
@@ -81,27 +88,33 @@
 
                 <li class="item-content item-input">
                     <div class="item-inner">
-                        <div class="item-title item-label">$FlightInfo.origin_airport_id</div>
+                        <div class="item-title item-label" style="width:46px;height:40px;background-color: #FFFFFF;border: auto;border-radius:3px;">
+                             <i class="icon list-icon-FlightInfo_origin_airport_id"></i>
+                        </div>
                         <div class="item-input-wrap">
-                            <input type="text" class="FlightInfo_origin_airport_id" readonly  />
+                            <input type="text" class="FlightInfo_origin_airport_id" readonly style="padding-left:30px;"  />
                         </div>
                     </div>
                 </li>
 
                 <li class="item-content item-input">
                     <div class="item-inner">
-                        <div class="item-title item-label">$FlightInfo.destination_airport_id</div>
+                        <div class="item-title item-label" style="width:46px;height:40px;background-color: #FFFFFF;border: auto;border-radius:3px;">
+                            <i class="icon list-icon-FlightInfo_destination_airport_id"></i>
+                        </div>
                         <div class="item-input-wrap">
-                            <input type="text" class="FlightInfo_destination_airport_id" readonly  />
+                            <input type="text" class="FlightInfo_destination_airport_id" readonly style="padding-left:30px;" />
                         </div>
                     </div>
                 </li>
 
                 <li class="item-content item-input">
                     <div class="item-inner">
-                        <div class="item-title item-label">$FlightInfo.flight_duration</div>
+                        <div class="item-title item-label" style="width:46px;height:40px;background-color: #FFFFFF;border: auto;border-radius:3px;">
+                             <i class="icon list-icon-FlightInfo_flight_duration"></i>
+                        </div>
                         <div class="item-input-wrap">
-                            <input type="text" value="{{data.flight_duration}}" readonly />
+                            <input type="text" value="{{data.flight_duration}}" readonly style="padding-left:30px;" />
 
                         </div>
                     </div>
@@ -125,9 +138,11 @@
 
                 <li class="item-content item-input">
                     <div class="item-inner">
-                        <div class="item-title item-label">$FlightBooking.order_no</div>
+                        <div class="item-title item-label" style="width:46px;height:40px;background-color: #FFFFFF;border: auto;border-radius:3px;">
+                             <i class="icon list-icon-FlightBooking_order_no"></i>
+                        </div>
                         <div class="item-input-wrap">
-                            <input type="text" class="FlightBooking_order_no" readonly  />
+                            <input type="text" class="FlightBooking_order_no" readonly style="padding-left:30px;" />
                         </div>
                     </div>
                 </li>
@@ -135,27 +150,33 @@
 
                 <li class="item-content item-input">
                     <div class="item-inner">
-                        <div class="item-title item-label">Amount</div>
+                        <div class="item-title item-label" style="width:46px;height:40px;background-color: #FFFFFF;border: auto;border-radius:3px;">
+                             <i class="icon list-icon-FlightBooking_amount"></i>
+                        </div>
                         <div class="item-input-wrap">
-                            <input type="text" class="FlightBooking_amount" readonly  />
+                            <input type="text" class="FlightBooking_amount" readonly style="padding-left:30px;" />
                         </div>
                     </div>
                 </li>
                 
                 <li class="item-content item-input">
                     <div class="item-inner">
-                        <div class="item-title item-label">Passengers</div>
+                        <div class="item-title item-label" style="width:46px;height:40px;background-color: #FFFFFF;border: auto;border-radius:3px;">
+                             <i class="icon list-icon-FlightBooking_passengers"></i>
+                        </div>
                         <div class="item-input-wrap">
-                            <input type="text" class="FlightBooking_passengers" readonly  />
+                            <input type="text" class="FlightBooking_passengers" readonly style="padding-left:30px;" />
                         </div>
                     </div>
                 </li>   
 
                 <li class="item-content item-input">
                     <div class="item-inner">
-                        <div class="item-title item-label">Email</div>
+                        <div class="item-title item-label" style="width:46px;height:40px;background-color: #FFFFFF;border: auto;border-radius:3px;">
+                             <i class="icon list-icon-FlightBooking_email"></i>
+                        </div>
                         <div class="item-input-wrap">
-                            <input type="text" placeholder="Email" class="FlightBooking_email" validate/>
+                            <input type="text" placeholder="Email" class="FlightBooking_email" validate style="padding-left:30px;"/>
                         </div>
                     </div>
                 </li>  

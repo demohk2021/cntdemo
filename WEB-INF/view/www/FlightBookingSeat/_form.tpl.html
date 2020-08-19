@@ -1,6 +1,6 @@
 <div class="card" >
     <div class="card-header">
-    Passenger</div>
+    Passenger&nbsp;1</div>
     <div class="card-content" style="padding-top:20px;padding-bottom:20px;">
 
 
@@ -9,18 +9,22 @@
 
         <li class="item-content item-input">
             <div class="item-inner">
-                <div class="item-title item-label">$FlightBookingSeat.ticket_no</div>
+                 <div class="item-title item-label" style="width:46px;height:40px;background-color: #FFFFFF;border: auto;border-radius:3px;">
+                      <i class="icon list-icon-FlightBookingSeat_ticket_no"></i>
+                </div>
                 <div class="item-input-wrap">
-                    <input type="text" class="FlightBookingSeat_ticket_no" placeholder="(Auto Generate)" value="{{data.ticket_no}}" disabled="disabled" />
+                    <input style="padding-left:30px;" type="text" class="FlightBookingSeat_ticket_no" placeholder="(Auto Generate)" value="{{data.ticket_no}}" disabled="disabled" />
                 </div>
             </div>
         </li>
 
         <li class="item-content item-input">
             <div class="item-inner">
-                <div class="item-title item-label">$FlightBookingSeat.passenger_name</div>
+                <div class="item-title item-label" style="width:46px;height:40px;background-color: #FFFFFF;border: auto;border-radius:3px;">
+                      <i class="icon list-icon-FlightBookingSeat_name"></i>
+                </div>
                 <div class="item-input-wrap">
-                    <input type="text" placeholder="$FlightBookingSeat.passenger_name" class="FlightBookingSeat_passenger_name" name="FlightBookingSeat[passenger_name]" value="{{data.passenger_name}}" required validate/>
+                    <input style="padding-left:30px;" type="text" placeholder="$FlightBookingSeat.passenger_name" class="FlightBookingSeat_passenger_name" name="FlightBookingSeat[passenger_name]" value="{{data.passenger_name}}" required validate/>
                     <span class="input-clear-button"></span>
                     <div class='item-input-info'></div>
                 </div>
@@ -29,9 +33,11 @@
 
         <li class="item-content item-input">
             <div class="item-inner">
-                <div class="item-title item-label">$FlightBookingSeat.passport_no</div>
+                <div class="item-title item-label" style="width:46px;height:40px;background-color: #FFFFFF;border: auto;border-radius:3px;">
+                      <i class="icon list-icon-FlightBookingSeat_passport_no"></i>
+                </div>
                 <div class="item-input-wrap">
-                    <input type="text" placeholder="$FlightBookingSeat.passport_no" class="FlightBookingSeat_passport_no" name="FlightBookingSeat[passport_no]" value="{{data.passport_no}}" validate/>
+                    <input style="padding-left:30px;" type="text" placeholder="$FlightBookingSeat.passport_no" class="FlightBookingSeat_passport_no" name="FlightBookingSeat[passport_no]" value="{{data.passport_no}}" validate/>
                     <span class="input-clear-button"></span>
 
                 </div>
@@ -40,9 +46,11 @@
 
         <li class="item-content item-input">
             <div class="item-inner">
-                <div class="item-title item-label">$FlightBookingSeat.age</div>
+                 <div class="item-title item-label" style="width:46px;height:40px;background-color: #FFFFFF;border: auto;border-radius:3px;">
+                      <i class="icon list-icon-FlightBookingSeat_age"></i>
+                </div>
                 <div class="item-input-wrap">
-                    <input type="number" pattern="[0-9]*" inputmode="numeric" placeholder="$FlightBookingSeat.age" class="FlightBookingSeat_age" name="FlightBookingSeat[age]" value="{{data.age}}" required validate />
+                    <input style="padding-left:30px;" type="number" pattern="[0-9]*" inputmode="numeric" placeholder="$FlightBookingSeat.age" class="FlightBookingSeat_age" name="FlightBookingSeat[age]" value="{{data.age}}" required validate />
                     <div class='item-input-info'></div>
                 </div>
             </div>
@@ -63,12 +71,14 @@
         
          <li class="item-content item-input">
             <div class="item-inner">
-                <div class="item-title item-label">$FlightBookingSeat.seat_no</div>
+                 <div class="item-title item-label" style="width:46px;height:40px;background-color: #FFFFFF;border: auto;border-radius:3px;">
+                      <i class="icon list-icon-FlightBookingSeat_seat_no"></i>
+                </div>
                 <div class="item-input-wrap">
                     <a class="item-link item-content FlightBookingSeat_seat_no" href="#" >
                         <input type="hidden" name="FlightBookingSeat[seat_no]">
-                        <div class="item-inner">
-                          <div class="item-after"></div>
+                        <div class="item-inner" style="text-align:left;">
+                          <div class="item-after" style="padding-left:15px;text-align:left;width:100%;">Select Seat No.</div>
                         </div>
                     </a>
                 </div>

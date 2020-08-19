@@ -740,7 +740,7 @@ var FlightInfoRoutes = [{
                                                       console.log(fiResult.data);
                                                       var price = fiResult.data.price.replace(/\D/g,'');
                                                       $$(".FlightBooking_card .FlightBooking_order_no").val(fbResult.data.order_no);
-                                                      $$(".FlightBooking_card .FlightBooking_amount").val(price * fbsResult.data.length);
+                                                      $$(".FlightBooking_card .FlightBooking_amount").val("HKD " + (price * fbsResult.data.length));
                                                       $$(".FlightBooking_card .FlightBooking_passengers").val(fbsResult.data.length + "");
                                                       $$(".FlightBooking_card").css("display","block");
                                                       $$(".FlightBooking_confirm").css("display","block");

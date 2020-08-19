@@ -1,4 +1,4 @@
-(function(){
+var ia = (function(){
             
 function initApp() {
    app = new Framework7({
@@ -295,11 +295,14 @@ function initTemplate() {
 
   setTimeout(function(){
       toOrder();
+      $$('.main_div').remove();
   },2000);
 
-initApp();
+    initApp();
 
 })();
+
+
 
 
 function getDisplayPage(){
@@ -395,7 +398,7 @@ function getDisplayPage(){
               
               var price = TO_FLIGHT_INFO_RESULT.data.price.replace(/\D/g,'');
               $$(".FlightBooking_card .FlightBooking_order_no").val(TO_FLIGHT_BOOKING_RESULT.data.order_no);
-              $$(".FlightBooking_card .FlightBooking_amount").val(price * TO_FLIGHT_BOOKING_SEAT_RESULT.data.length);
+              $$(".FlightBooking_card .FlightBooking_amount").val("HKD " + (price * TO_FLIGHT_BOOKING_SEAT_RESULT.data.length));
               $$(".FlightBooking_card .FlightBooking_passengers").val(TO_FLIGHT_BOOKING_SEAT_RESULT.data.length + "");
               $$(".FlightBooking_card .FlightBooking_email").val(email);
               $$(".FlightBooking_card").css("display","block");

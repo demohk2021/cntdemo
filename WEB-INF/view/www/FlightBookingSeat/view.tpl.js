@@ -211,7 +211,7 @@ var FlightBookingSeatRoutes = [{
              console.log("flightBookingId: " + $$("#FlightBookingSeatNewPage .FlightBookingSeat_flight_booking_id").val());
                 
                 
-                
+            
 
             
             var lockedSeats = [];
@@ -221,6 +221,7 @@ var FlightBookingSeatRoutes = [{
             q.and("eq_deleted",false);
             q.and("eq_deleted_from_flight_booking_seat",false);
             q.and("eq_deleted_from_flight_booking",false);
+            q.and("eq_flight_info_id_from_flight_booking",$$(".FlightInfo_id").val());
             q.autoSelect = true;
             var lockedSeatsResult = q.find();
             if(lockedSeatsResult.status === 1){
@@ -236,15 +237,16 @@ var FlightBookingSeatRoutes = [{
                       animate: true
                   });
                   popup.open(); 
-                  var rows = new Array(30);
+                  var rows = new Array(22);
                   var columns = ['A','B','C','D','E','F'];
                   
                   var html = "<table class='seat_map_table'>"
                   
-                //  html += "<tr><td colspan='9'><img src='public/www/images/header.png' style='height:120px;width:300px;' /></td></tr>";
-                          
-                  for(var r = 1;r <= rows.length;r++){
+                  html += "<tr><td height='330px;'>&nbsp;</td></tr>";
+                  for(var r = 3;r <= rows.length;r++){
                       html += "<tr>"
+                      
+                      html += "<td width='120px'>&nbsp;<td>"
                       
                       html += "<td>";
                       html += "<div class='seat_label_left'>" + r + "</div>";
@@ -254,7 +256,7 @@ var FlightBookingSeatRoutes = [{
                           
                           if(c == 3){
                               html += "<td>";
-                              html += "<div  style='width:18px;'>&nbsp;</div>";
+                              html += "<div  style='width:14px;'>&nbsp;</div>";
                               html += "</td>";
                           }
                           
@@ -262,7 +264,7 @@ var FlightBookingSeatRoutes = [{
                           var value = r + columns[c];
                           var css = "seat_no_div";
                           var isLocked = lockedSeats.indexOf(value) > -1;
-                          console.log(value,isLocked);
+                          //console.log(value,isLocked);
                           if(isLocked){
                               css = "seat_no_locked";
                           }
@@ -274,13 +276,17 @@ var FlightBookingSeatRoutes = [{
                       html += "<div class='seat_label_right'>" + r + "</div>";
                       html += "</td>";
                       
+                      html += "<td width='120px'>&nbsp;<td>"
+                      
                       html += "</tr>"
                   }
                   
-
+                  html += "<tr><td height='200px;'>&nbsp;</td></tr>";
                   
                   html += "</table>";
                   $$("#FlightBookingSeatImagePopup .SeatMap").html(html);
+                  $$(".FlightBookingSeat_seat_no input").val();
+                  
               });
 
                 
@@ -351,6 +357,7 @@ var FlightBookingSeatRoutes = [{
             q.and("eq_deleted",false);
             q.and("eq_deleted_from_flight_booking_seat",false);
             q.and("eq_deleted_from_flight_booking",false);
+            q.and("eq_flight_info_id_from_flight_booking",$$(".FlightInfo_id").val());
             q.autoSelect = true;
             var lockedSeatsResult = q.find();
             if(lockedSeatsResult.status === 1){
@@ -358,7 +365,7 @@ var FlightBookingSeatRoutes = [{
                     lockedSeats[index] = lockedSeatsResult.data[index].as_flight_booking_seat_seat_no;
                 }
             }
-            console.log("locked: ",lockedSeats);
+            //console.log("locked: ",lockedSeats);
 
               $$("#FlightBookingSeatEditPage .FlightBookingSeat_seat_no").on("click",function(e){
                   var popup = app.popup.create({
@@ -366,16 +373,14 @@ var FlightBookingSeatRoutes = [{
                       animate: true
                   });
                   popup.open(); 
-                  var rows = new Array(30);
+                  var rows = new Array(22);
                   var columns = ['A','B','C','D','E','F'];
                   
                   var html = "<table class='seat_map_table'>"
-                  
-                  
-                          
-                  for(var r = 1;r <= rows.length;r++){
+                  html += "<tr><td height='330px;'>&nbsp;</td></tr>";  
+                  for(var r = 3;r <= rows.length;r++){
                       html += "<tr>"
-                      
+                      html += "<td width='120px'>&nbsp;<td>"
                       html += "<td>";
                       html += "<div class='seat_label_left'>" + r + "</div>";
                       html += "</td>";
@@ -384,7 +389,7 @@ var FlightBookingSeatRoutes = [{
                           
                           if(c == 3){
                               html += "<td>";
-                              html += "<div  style='width:18px;'>&nbsp;</div>";
+                              html += "<div  style='width:14px;'>&nbsp;</div>";
                               html += "</td>";
                           }
                           
@@ -395,8 +400,9 @@ var FlightBookingSeatRoutes = [{
                           if(isLocked && result.data.seat_no !== value){
                               css = "seat_no_locked";
                           }
+                          console.log(result.data.seat_no,value);
                           if(result.data.seat_no === value){
-                              css = "seat_no_div seat_no_selected";
+                              css = "seat_no_selected";
                           }
                           html += "<div class='" + css + "' ><a href='#' onclick='selectSeat(this)' seat='"+ value +"' >" + columns[c] + "</a></div>";
                           html += "</td>";
@@ -406,11 +412,13 @@ var FlightBookingSeatRoutes = [{
                       html += "<div class='seat_label_right'>" + r + "</div>";
                       html += "</td>";
                       
+                      html += "<td width='120px'>&nbsp;<td>"
+                      
                       html += "</tr>"
                   }
                   
 
-                  
+                  html += "<tr><td height='200px;'>&nbsp;</td></tr>";
                   html += "</table>";
                   $$("#FlightBookingSeatImagePopup .SeatMap").html(html);
               });
